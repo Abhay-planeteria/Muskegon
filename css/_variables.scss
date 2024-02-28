@@ -1,0 +1,26 @@
+$primary:#03246A;
+$secondary:#0033A0;
+$cyber-yellow:#FFD100;
+$marigold:#EAA522;
+$gill: 'Gill Sans',
+sans-serif;
+$industry: 'Industry',
+sans-serif;
+$black:#000000;
+$white:#ffffff;
+$dolphin-gray:#798C8C;
+$anti-flash-white:#F0F3FA;
+// color paltte - 
+$colors:( "primary":$primary, "secondary":$secondary, "cyber-yellow":$cyber-yellow, "marigold":$marigold, "black":$black, "anti-flash-white":$anti-flash-white);
+.test-btn {
+    background-color: map-get($colors, "marigold");
+}
+
+@mixin fancy-border($size:1px, $color:#000) {
+    border: $size solid $color;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

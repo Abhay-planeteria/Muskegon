@@ -1,0 +1,960 @@
+// variables and functions
+@use "sass:math";
+@import "variables";
+@import "mixins";
+@import "breakpoints";
+//componenets (button, anchor tags, heading tags etc)
+
+/*================================= Main Banner Slider Start =======================================*/
+#main-slider-banner{
+    .sliderImg{
+        height: 702px;
+        object-fit: cover;
+    }
+    .carousel-caption{
+        top: 53%;
+        right: 0;
+        left: 48%;
+        bottom: auto;
+        padding: 2.3rem;
+        background-color: rgba(255,255,255,0.95);
+        .caption-Wrapper{
+            padding: 0 1.5rem;
+            p{
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    /* slider next-prev */
+    .carousel-control{
+        top: 50%;
+        width: 32px;
+        height: 32px;
+        opacity: 0.69;
+        border-radius: 100px;
+        transform: translateY(-50%);
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        &-next{
+            @extend .carousel-control;
+            right: 17px;
+            .carousel-control-next-icon{
+                left: 3px;
+                top: -2px;
+                font-size: 22px;
+                font-weight: 500;
+                background: none;
+                position: absolute;
+            }
+        }
+        &-prev{
+            @extend .carousel-control;
+            left: 17px;
+            .carousel-control-prev-icon{
+                left: 3px;
+                top: -2px;
+                font-size: 22px;
+                font-weight: 500;
+                background: none;
+                position: absolute;
+            }
+        }
+        &:hover{
+            opacity: 1;
+            color: #464D4D;
+            background-color: #FFFFFF;
+        }
+    }
+    /* slider next-prev end */
+}
+
+/*================================= Main Banner Slider End =======================================*/
+
+/*================================= Quick View Section Start =======================================*/
+#section-quick-view{
+    padding-top: 25px;
+    padding-bottom: 40px;
+    background-color: $secondary;
+    .row{
+        gap: 67px;
+    }
+    .quick-item{
+        color: $white;
+        text-align: center;
+        .quick-view-icon{
+            height: 55px;
+            min-width: 55px;
+            margin-bottom: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+        }
+        &:nth-child(1){
+            .quick-view-icon{
+                background-image: url(../img/quick-view-01.png);
+            }
+            &:hover{
+                .quick-view-icon{
+                    background-image: url(../img/quick-view-01-h.png);
+                }
+            }
+        }
+        &:nth-child(2){
+            .quick-view-icon{
+                background-image: url(../img/quick-view-02.png);
+            }
+            &:hover{
+                .quick-view-icon{
+                    background-image: url(../img/quick-view-02-h.png);
+                }
+            }
+        }
+        &:nth-child(3){
+            .quick-view-icon{
+                background-image: url(../img/quick-view-03.png);
+            }
+            &:hover{
+                .quick-view-icon{
+                    background-image: url(../img/quick-view-03-h.png);
+                }
+            }
+        }
+        &:nth-child(4){
+            .quick-view-icon{
+                background-image: url(../img/quick-view-04.png);
+            }
+            &:hover{
+                .quick-view-icon{
+                    background-image: url(../img/quick-view-04-h.png);
+                }
+            }
+        }
+        &:nth-child(5){
+            .quick-view-icon{
+                background-image: url(../img/quick-view-05.png);
+            }
+            &:hover{
+                .quick-view-icon{
+                    background-image: url(../img/quick-view-05-h.png);
+                }
+            }
+        }
+    }
+    &::after{
+        left: 0;
+        top: 100%;
+        content: "";
+        height: 65px;
+        padding-left: 100%;
+        position: absolute;
+        background-color: #F0F3FA;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+           -moz-clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+            -ms-clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+             -o-clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+    }
+}
+/*================================= Quick View Section End =======================================*/
+/*================================= Upcoming Events Section Start =======================================*/
+#home-upcoming-events{
+    margin-top: 90px;
+    &::before{
+        left: 0;
+        bottom: 0;
+        content: "";
+        height: 88%;
+        padding-left: 100%;
+        position: absolute;
+        background-color: $cyber-yellow;
+        -webkit-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+           -moz-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+            -ms-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+             -o-clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+    }
+    &::after{
+        left: 0;
+        top: 99%;
+        content: "";
+        height: 140px;
+        padding-left: 100%;
+        position: absolute;
+        background-color: $cyber-yellow;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+           -moz-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+            -ms-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+             -o-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+    }
+    .row{
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    #accordion-events{
+        gap: 60px;
+        position: relative;
+    }
+    .mcc-student-circle{
+        .mcc-inner-circle{
+            width: 236px;
+            height: 236px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            border-radius: 100%;
+            margin-bottom: 12px;
+            transition: all .2s ease-in-out;
+            .circle-img{
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                transition: all .2s ease-in-out;
+            }
+            &:hover .circle-img{
+                transform: scale(1.1);
+            }
+            .circle-overlay{
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                position: absolute;
+                transition: all .2s ease-in-out;
+                background: linear-gradient(0deg, rgb(26, 26, 26) 0%, rgb(53, 53, 53) 10%, rgba(255,255,255,0) 50%);
+            }
+            .circle-button{
+                left: 50%;
+                z-index: 5;
+                border: 0;
+                width: 27px;
+                height: 27px;
+                bottom: 18px;
+                position: absolute;
+                border-radius: 100%;
+                transform: skewY(2deg) translateX(-50%);
+                background-color: $cyber-yellow;
+                &::before{
+                    top: 78%;
+                    left: 21%;
+                    z-index: 5;
+                    color: $black;
+                    content: "\207A";
+                    font-size: 50px;
+                    line-height: 0px;
+                    font-weight: 700;
+                    position: absolute;
+                    display: inline-block;
+                    font-family: 'Gill Sans';
+                    transition: all 0.2s ease-in-out;
+                }
+                &:focus{
+                    outline: 0;
+                }
+                &[aria-expanded=true]{
+                    width: 18px;
+                    height: 18px;
+                    background-color: $white;
+                    transform: rotate(45deg);
+                    transition: all .2s ease-in-out;
+                    &::before{
+                        left: 25%;
+                        font-size: 32px;
+                    }
+                }
+            }
+            .circle-slide{
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 100%;
+                z-index: 4;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: $secondary;
+                transition: all .2s ease-in-out;
+                &.collapse.show{
+                    top: 0;
+                }
+                ul{
+                    margin-bottom: 0;
+                    list-style: none;
+                    margin-block-start: 0;
+                    padding-inline-start: 0;
+                    li{
+                        padding-bottom: 5px;
+                    }
+                }
+                a{
+                    color: $white;
+                    @include underline;
+                }
+            }
+        }
+        &:nth-child(1) .circle-img{
+            background-image: url(../img/mcc-student-01.png);
+        }
+        &:nth-child(2) .circle-img{
+            background-image: url(../img/mcc-student-02.png);
+        }
+        &:nth-child(3) .circle-img{
+            background-image: url(../img/mcc-student-03.png);
+        }
+        &:nth-child(4) .circle-img{
+            background-image: url(../img/mcc-student-04.png);
+        }
+        h3{
+            color: $black;
+        }
+    }
+    .up-events-inner{
+        max-width: 1440px;
+        overflow: hidden;
+        &::before{
+            top: 30%;
+            left: 50%;
+            right: auto;
+            width: 100%;
+            opacity: .20;
+            color: $white;
+            @include upper;
+            font-size: 200px;
+            max-width: 100vw;
+            font-weight: bold;
+            text-align: center;
+            position: absolute;
+            line-height: normal;
+            @include dashbird;
+            content: "What'S NEW AT MCC";
+            transform: rotate(-2deg) translateX(-50%);
+        }
+        #up-events{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        h2{
+            color: $black;
+            margin-top: 144px;
+            margin-bottom: 44px;
+        }
+        #up-events-carousel{
+            .owl-stage-outer{
+                z-index: 1;
+            }
+            .owl-nav, .owl-nav.disabled{
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                position: absolute;
+                /* carousel next-prev end */
+                .carousel-control{
+                    top: 50%;
+                    opacity: 1;
+                    width: 32px;
+                    height: 32px;
+                    color: $black;
+                    border-radius: 100px;
+                    border: 2px solid $black;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    &-next{
+                        @extend .carousel-control;
+                        right: -35px;
+                        .carousel-control-next-icon{
+                            left: 3px;
+                            top: -2px;
+                            font-size: 22px;
+                            font-weight: 500;
+                            background: none;
+                            position: absolute;
+                        }
+                    }
+                    &-prev{
+                        @extend .carousel-control;
+                        left: -45px;
+                        .carousel-control-prev-icon{
+                            left: 3px;
+                            top: -2px;
+                            font-size: 22px;
+                            font-weight: 500;
+                            background: none;
+                            position: absolute;
+                        }
+                    }
+                    &:hover{
+                        color: $white;
+                        background-color: $black;
+                    }
+                }
+                /* carousel next-prev end */
+            }
+            .event-box{
+                margin-right: 10px;
+                background-color: $white;
+                border-top: 5px solid $secondary;
+                box-shadow: 0px 3px 6px #00000038;
+                .event-date{
+                    padding: 20px 10px;
+                    text-align: center;
+                    background-color: $secondary;
+                    span{
+                        @include gill;
+                        color: $white;
+                        display: block;
+                        font-size: 35px;
+                        font-weight: 700;
+                        line-height: normal;
+                        &.event-day{
+                            @include upper;
+                            font-size: 24px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .event-content{
+                    height: 100%;
+                    padding: 24px 15px 35px;
+                    h3{
+                        color: $black;
+                    }
+                    a{
+                        bottom: 15px;
+                        position: absolute;
+                        @include underline;
+                    }
+                }
+            }
+        }
+        a.btn_normal{
+            left: 50%;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            padding: 14px 36px;
+            border: 1px solid $black;
+            transform: translateX(-50%);
+            &:hover{
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
+}
+
+/*================================= Upcoming Events Section End =======================================*/
+
+/*================================= Our Program Section Start =======================================*/
+#our-programs{
+    margin-top: 140px;
+    margin-bottom: 25px;
+    .row{
+        margin: 0 auto;
+        max-width: 1440px;
+        padding-left: 50px;
+        padding-right: 50px;
+        align-items: center;
+        flex-direction: column;
+        h3{
+            @include lubalin;
+            color: $black;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+        p{
+            width: 60%;
+            margin-bottom: 30px;
+        }
+        a{
+            padding: 13px 51px;
+            &:hover{
+                color: $white;
+                background-color: $black;
+            }
+        }
+        #programs-list{
+            max-width: 1200px;
+            margin-bottom: 45px;
+            justify-content: center;
+            .owl-stage-outer{
+                z-index: 1;
+            }
+            .owl-nav, .owl-nav.disabled{
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                position: absolute;
+                /* carousel next-prev end */
+                .carousel-control{
+                    top: 50%;
+                    opacity: 1;
+                    padding: 0;
+                    width: 32px;
+                    height: 32px;
+                    color: $secondary;
+                    border-radius: 100px;
+                    border: 2px solid $secondary;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    &-next{
+                        @extend .carousel-control;
+                        right: -35px;
+                        .carousel-control-next-icon{
+                            left: 3px;
+                            top: -2px;
+                            font-size: 22px;
+                            font-weight: 500;
+                            background: none;
+                            position: absolute;
+                        }
+                    }
+                    &-prev{
+                        @extend .carousel-control;
+                        left: -45px;
+                        .carousel-control-prev-icon{
+                            left: 3px;
+                            top: -2px;
+                            font-size: 22px;
+                            font-weight: 500;
+                            background: none;
+                            position: absolute;
+                        }
+                    }
+                    &:hover{
+                        color: $white;
+                        background-color: $secondary;
+                    }
+                }
+                /* carousel next-prev end */
+            }
+            .program-listBox{
+                margin-right: 10px;
+                img{
+                    margin-bottom: 10px;
+                }
+                h3{
+                    @include gill;
+                    color: $black;
+                    font-weight: 700;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+/*================================= Our Program Section End =======================================*/
+
+/*================================= Students Life Section Start =======================================*/
+
+#student-life{
+    padding-top: 180px;
+    &::before{
+        top: 1%;
+        left: 0;
+        bottom: 0;
+        content: "";
+        height: 180px;
+        padding-left: 100%;
+        position: absolute;
+        background-color: $secondary;
+        -webkit-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+           -moz-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+            -ms-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+             -o-clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 70%, 100% 0, 100% 100%, 0 100%);
+    }
+    &::after{
+        left: 0;
+        top: 99%;
+        z-index: 1;
+        content: "";
+        height: 140px;
+        padding-left: 100%;
+        position: absolute;
+        background-color: $secondary;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+           -moz-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+            -ms-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+             -o-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 7%, 0 100%);
+    }
+    .container-fluid{
+        background-color: $secondary;
+    }
+    .row{
+        margin: 0 auto;
+        max-width: 1440px;
+        position: relative;
+        align-items: center;
+        .student-life-slider{
+            z-index: 1;
+            max-width: 885px;
+            position: relative;
+            .student-life-sliderImg{
+                height: 590px;
+                object-fit: cover;
+            }
+            /* slider next-prev */
+            .carousel-control{
+                top: 50%;
+                width: 32px;
+                height: 32px;
+                opacity: 1;
+                border-radius: 100px;
+                transform: translateY(-50%);
+                border: 2px solid #FFFFFF;
+                background-color: transparent;
+                &-next{
+                    @extend .carousel-control;
+                    right: 60px;
+                    .carousel-control-next-icon{
+                        left: 3px;
+                        top: -2px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        background: none;
+                        position: absolute;
+                    }
+                }
+                &-prev{
+                    @extend .carousel-control;
+                    left: 27px;
+                    .carousel-control-prev-icon{
+                        left: 3px;
+                        top: -2px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        background: none;
+                        position: absolute;
+                    }
+                }
+                &:hover{
+                    color: #464D4D;
+                    background-color: #FFFFFF;
+                }
+            }
+            /* slider next-prev end */
+        }
+        .student-life-contentBox{
+            z-index: 2;
+            right: 35px;
+            min-height: 480px;
+            position: relative;
+            padding-top: 30px;
+            background-color: $white;
+            width: calc(100% - 885px);
+            border-top: 6px solid $cyber-yellow;
+            box-shadow: 0px 3px 6px #00000038;
+            .std-content-body{
+                top: 40%;
+                left: 52px;
+                transform: translateY(-50%);
+                position: absolute;
+                h3{
+                    @include lubalin;
+                    color: $black;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+                h2{
+                    margin-bottom: 10px;
+                }
+                p{
+                    width: 85%;
+                    line-height: 24px;
+                    margin-bottom: 0px;
+                }
+            }
+            .std-content-footer{
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                gap: 40px;
+                position: absolute;
+                padding: 10px 2px 12px 50px;
+                background-color: $anti-flash-white;
+                .std-life-social{
+                    gap: 4px;
+                    a.social-link{
+                        width: 31px;
+                        height: 31px;
+                        margin: 0 auto;
+                        border-radius: 100%;
+                        background-color: $secondary;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        &-twitter{
+                            @extend .social-link;
+                            background-image: url(../img/social-twit.png);
+                        }
+                        &-facebook{
+                            @extend .social-link;
+                            background-image: url(../img/social-fb.png);
+                        }
+                        &-instagram{
+                            @extend .social-link;
+                            background-image: url(../img/social-insta.png);
+                        }
+                        &-youtube{
+                            @extend .social-link;
+                            background-image: url(../img/social-youtube.png);
+                        }
+                    }
+                }
+                .std-life-links{
+                    a{
+                        position: relative;
+                        margin-right: 12px;
+                        padding-right: 12px;
+                        text-align: center;
+                        @include underline;
+                        &::after{
+                            right: 0;
+                            content: "|";
+                            color: $secondary;
+                            position: absolute;
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                            padding-right: 0;
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*================================= Students Life Section End =======================================*/
+
+/*================================= Testimonials Section Start =======================================*/
+#home-testimonial{
+    padding-top: 140px;
+    padding-bottom: 175px;
+    &::before{
+        left: 0;
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+        content: "";
+        height: 140px;
+        padding-left: 100%;
+        position: absolute;
+        background-color: $anti-flash-white;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+           -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+            -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+             -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+    }
+    &::after{
+        left: 0;
+        content: "";
+        height: 105px;
+        opacity: 0.11;
+        padding-left: 100%;
+        position: absolute;
+        top: calc(100% - 105px);
+        background-color: $cyber-yellow;
+        -webkit-clip-path: polygon(0 0, 100% 75%, 100% 100%, 0 100%);
+           -moz-clip-path: polygon(0 0, 100% 75%, 100% 100%, 0 100%);
+            -ms-clip-path: polygon(0 0, 100% 75%, 100% 100%, 0 100%);
+             -o-clip-path: polygon(0 0, 100% 75%, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 75%, 100% 100%, 0 100%);
+    }
+    .testimonial-wrapper{
+        padding-top: 95px;
+        position: relative;
+        &::before{
+            left: 0;
+            top: 115px;
+            opacity: 1;
+            content: "“";
+            @include regular;
+            @include lubalin;
+            font-size: 210px;
+            line-height: 72px;
+            color: $secondary;
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+        }
+        &::after{
+            right: 0;
+            opacity: 1;
+            content: "“";
+            bottom: 85px;
+            @include regular;
+            @include lubalin;
+            font-size: 210px;
+            line-height: 72px;
+            color: $secondary;
+            position: absolute;
+            transform: matrix(-1, 0, 0, -1, 0, 0);
+            transition: all 0.3s ease-in-out;
+        }
+        .testimonial-title{
+            h3{
+                color: $black;
+                @include medium;
+                @include lubalin;
+                margin-bottom: 40px;
+            }
+        }
+        #testimonial-slider{
+            z-index: 1;
+            position: relative;
+            p{
+                color: $black;
+            }
+            .carousel-inner{
+                max-width: 715px;
+                transition: all 0.3s ease-in-out;
+            }
+            .carousel-caption{
+                top: 0;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                position: relative;
+                .caption-Wrapper{
+                    .caption-body p{
+                        @include arvo;
+                        line-height: 27px;
+                        font-style: italic;
+                        margin-bottom: 40px;
+                    }
+                    .caption-foot-text{
+                        margin-left: 30px;
+                        p{
+                            margin-bottom: 0;
+                        }
+                        h5{
+                            @include semi;
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+            
+            /* slider next-prev */
+            .carousel-control{
+                top: 26%;
+                opacity: 1;
+                width: 32px;
+                height: 32px;
+                z-index: 11;
+                color: $secondary;
+                border-radius: 100px;
+                transform: translateY(-50%);
+                border: 2px solid $secondary;
+                background-color: transparent;
+                &-next{
+                    @extend .carousel-control;
+                    right: -60px;
+                    .carousel-control-next-icon{
+                        left: 3px;
+                        top: -2px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        background: none;
+                        position: absolute;
+                    }
+                }
+                &-prev{
+                    @extend .carousel-control;
+                    left: -60px;
+                    .carousel-control-prev-icon{
+                        left: 3px;
+                        top: -2px;
+                        font-size: 22px;
+                        font-weight: 500;
+                        background: none;
+                        position: absolute;
+                    }
+                }
+                &:hover{
+                    color: #464D4D;
+                    background-color: #FFFFFF;
+                }
+            }
+            /* slider next-prev end */
+        }
+    }
+}
+/*================================= Testimonials Section End =======================================*/
+
+/*================================= Quick Facts Section Start =======================================*/
+#section-facts{
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 88px;
+    background-color: $cyber-yellow;
+    .quick-facts-bTitle{
+        width: 100%;
+        text-align: center;
+        transform: rotate(-2deg);
+        h2{
+            width: 100%;
+            opacity: 0.2;
+            color: $white;
+            @include upper;
+            display: inline;
+            font-size: 14vw;
+            max-width: 100vw;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            line-height: normal;
+            @include dashbird;
+        }
+    }
+    .quick-facts-Title h2{
+        margin-bottom: 70px;
+    }
+    .row h2{ 
+        color: $black;
+    }
+    .quick-item-row{
+        gap: 67px;
+        h2{ 
+            color: $black;
+        }
+    }
+    .quick-item{
+        color: $white;
+        max-width: 160px;
+        min-width: 160px;
+        text-align: center;
+        .quick-facts-icon{
+            min-height: 58px;
+            margin-bottom: 5px;
+        }
+        h2{
+            margin-bottom: 0px;
+        }
+        h3{
+            color: $black;
+        }
+    }
+}
+/*================================= Quick Facts Section End =======================================*/

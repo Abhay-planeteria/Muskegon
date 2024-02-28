@@ -1,0 +1,407 @@
+/*================================= Industry Inc Start =======================================*/
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Light.woff2') format('woff2'),
+        url('../fonts/Industry-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-BookItalic';
+    src: url('../fonts/Industry-BookItalic.woff2') format('woff2'),
+        url('../fonts/Industry-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-Book';
+    src: url('../fonts/Industry-Book.woff2') format('woff2'),
+        url('../fonts/Industry-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-Demi';
+    src: url('../fonts/Industry-Demi.woff2') format('woff2'),
+        url('../fonts/Industry-Demi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Industry-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Industry-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Industry-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Industry-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Bold.woff2') format('woff2'),
+        url('../fonts/Industry-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-DemiItalic';
+    src: url('../fonts/Industry-DemiItalic.woff2') format('woff2'),
+        url('../fonts/Industry-DemiItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Black.woff2') format('woff2'),
+        url('../fonts/Industry-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-DemiItalic';
+    src: url('../fonts/Industry-DemiItalic.woff2') format('woff2'),
+        url('../fonts/Industry-DemiItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Black.woff2') format('woff2'),
+        url('../fonts/Industry-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-Book';
+    src: url('../fonts/Industry-Book.woff2') format('woff2'),
+        url('../fonts/Industry-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-BookItalic';
+    src: url('../fonts/Industry-BookItalic.woff2') format('woff2'),
+        url('../fonts/Industry-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry-Demi';
+    src: url('../fonts/Industry-Demi.woff2') format('woff2'),
+        url('../fonts/Industry-Demi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Bold.woff2') format('woff2'),
+        url('../fonts/Industry-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Medium.woff2') format('woff2'),
+        url('../fonts/Industry-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-LightItalic.woff2') format('woff2'),
+        url('../fonts/Industry-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Light.woff2') format('woff2'),
+        url('../fonts/Industry-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-Medium.woff2') format('woff2'),
+        url('../fonts/Industry-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Industry-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-LightItalic.woff2') format('woff2'),
+        url('../fonts/Industry-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Industry';
+    src: url('../fonts/Industry-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Industry-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*================================= Industry Inc End =======================================*/
+
+/*================================= Gill Sans Start =======================================*/
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-HeavyItalic.woff2') format('woff2'),
+        url('../fonts/GillSans-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-BoldItalic.woff2') format('woff2'),
+        url('../fonts/GillSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-Bold.woff2') format('woff2'),
+        url('../fonts/GillSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-LightItalic.woff2') format('woff2'),
+        url('../fonts/GillSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-Heavy.woff2') format('woff2'),
+        url('../fonts/GillSans-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-Italic.woff2') format('woff2'),
+        url('../fonts/GillSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-CondensedRegular.woff2') format('woff2'),
+        url('../fonts/GillSans-CondensedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-CondensedBold.woff2') format('woff2'),
+        url('../fonts/GillSans-CondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans.woff2') format('woff2'),
+        url('../fonts/GillSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-Light.woff2') format('woff2'),
+        url('../fonts/GillSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-MediumItalic.woff2') format('woff2'),
+        url('../fonts/GillSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-Medium.woff2') format('woff2'),
+        url('../fonts/GillSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= Gill Sans End =======================================*/
+/*================================= Gill Sans semi-bold Start =======================================*/
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/GillSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= Gill Sans semi-bold End =======================================*/
+
+/*================================= DASHBIRD Start =======================================*/
+@font-face {
+    font-family: 'DASHBIRD';
+    src: url('../fonts/DASHBIRD-Regular.woff2') format('woff2'),
+        url('../fonts/DASHBIRD-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DASHBIRD';
+    src: url('../fonts/DASHBIRD-Regular.woff2') format('woff2'),
+        url('../fonts/DASHBIRD-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= DASHBIRD End =======================================*/
+
+/*================================= ITC Lubalin Graph Std End =======================================*/
+@font-face {
+    font-family: 'ITC Lubalin Graph Std';
+    src: url('../fonts/LubalinGraphStd-Medium.woff2') format('woff2'),
+        url('../fonts/LubalinGraphStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/*================================= ITC Lubalin Graph Std End =======================================*/
+
+/*================================= Arvo Start =======================================*/
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Arvo-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo-Bold.woff2') format('woff2'),
+        url('../fonts/Arvo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo.woff2') format('woff2'),
+        url('../fonts/Arvo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo-Italic.woff2') format('woff2'),
+        url('../fonts/Arvo-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+/*================================= Arvo End =======================================*/
