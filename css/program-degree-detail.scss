@@ -1,0 +1,464 @@
+// variables and functions
+@use "sass:math";
+@import "variables";
+@import "mixins";
+@import "breakpoints";
+//componenets (button, anchor tags, heading tags etc)
+
+/*================================= Program Directory Start =======================================*/
+
+.main_wrapper{
+    .page_title{
+        margin-bottom: 0px;
+        h1{
+            left: 50%;
+            z-index: 2;
+            width: 100%;
+            bottom: 30px;
+            color: $white;
+            padding: 0 15px;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+        .overlay-grade{
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: 0;
+            z-index: 1;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            background: linear-gradient(0deg, rgb(8, 8, 8) 0%, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
+        }
+    }
+    .main_breadcrumb{
+        .breadcrumb{
+            padding: 12px 100px 0;
+            background-color: transparent;
+            .breadcrumb-item+.breadcrumb-item{
+                padding-left: 0.25rem;
+                &::before{
+                    content: ">";
+                    @include bold;
+                    color: $primary;
+                    padding-right: 0.25rem;
+                }
+                &.active{
+                    @include regular;
+                    color: $primary;
+                }
+            }
+            a{
+                @include semi;
+                color: $primary;
+            }
+        }
+    }
+    
+
+    .pro_dir_Wraper .searchFilterBlock {
+        //padding: 36px 20px 50px;
+        //background-color: $anti-flash-white;
+        .acc__card{
+            margin-bottom: 10px;
+        }
+        .acc__title {
+            display: flex;
+            cursor: pointer;
+            min-height: 60px;
+            border-radius: 0px;
+            position: relative;
+            align-items: center;
+            padding-left: 35px;
+            background: $anti-flash-white;
+            &.active{
+                .acco_sign{
+                    background: $secondary;
+                    transition: all 0.3s ease-in-out;
+                    span {
+                        color: $white;
+                        transform: translate(-50%, -50%) rotate(-90deg);
+                    }
+                }
+                h3{
+                    color: $black;
+                }
+            }
+            h3 {
+                margin: 0px;
+                color: $black;
+                position: relative;
+            }
+            .acco_sign {
+                width: 20px;
+                right: 20px;
+                height: 20px;
+                position: absolute;
+                border-radius: 100%;
+                border: 1px solid $secondary;
+                transition: all 0.3s ease-in-out;
+                span {
+                    top: 50%;
+                    left: 50%;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $secondary;
+                    position: absolute;
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
+        }
+    
+        .acc__panel {
+            display: none;
+            border-top: 0;
+            background: $anti-flash-white;
+            padding: 0px 20px 30px 35px;
+            h6 {
+                margin-bottom: 0;
+            }
+            .tel_em_fax {
+                margin-bottom: 20px;
+                strong {
+                    color: $black;
+                    font-weight: 700;
+                }
+                a {
+                    color: $primary;
+                    font-weight: 600;
+                    text-decoration: none;
+                    &:hover {
+                        color: #2977AE;
+                        text-decoration: underline;
+                    }
+                }
+                p {
+                    margin-bottom: 3px;
+                }
+                p.adress {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+
+    .pro_dir_filter {
+        padding: 0px 100px 70px;
+        .row{
+            justify-content: space-between;
+            .col-le{
+                min-width: 340px;
+                .filterBlock{
+                    margin-bottom: 45px;
+                }
+                .filter-check-Block{
+                    flex-direction: column;
+                    .custom-control{
+                        gap: 10px;
+                        padding-left: 0px;
+                        align-items: center;
+                        margin-bottom: 30px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        .custom-control-icon{
+                            //margin-right: 10px;
+                            //margin-left: 40px;
+                            width: 35px;
+                            display: flex;
+                            margin-left: 35px;
+                            img{
+                                margin: 0 auto;
+                            }
+                        }
+                        p{
+                            margin: 0;
+                        }
+                        .btn{
+                            padding: 0;
+                            display: inline-flex;
+                            &:focus{
+                                box-shadow: none;
+                            }
+                        }
+                        h5{
+                            color: $secondary;
+                            margin: 0;
+                        }
+                        .custom-control-label{
+                            top: 0;
+                            width: 30px;
+                            position: absolute;
+                            &::after,
+                            &::before{
+                                top: 0;
+                                left: 0;
+                                border: 0;
+                                width: 22px;
+                                height: 22px;
+                                border-radius: 0;
+                                box-shadow: 0px 0px 3px #00000029;
+                            }
+                        }
+                        .custom-control-input:checked~.custom-control-label::before{
+                            color: $black;
+                            border: none;
+                            background-color: $cyber-yellow;
+                        }
+                        .custom-control-input:checked~.custom-control-label::after{
+                            color: $black;
+                        }
+                    }
+                }
+            }
+            .col-re{
+                max-width: calc(100% - 370px);
+                h2{
+                    color: $black;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #798C8C;
+                }
+                p{
+                    line-height: 24px;
+                }
+                h3{
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+
+                .acc__main{
+                    margin-top: 50px;
+                    margin-bottom: 70px;
+                }
+                .acc__card {
+                    margin-bottom: 10px;
+                }
+                .acc__title {
+                    display: flex;
+                    cursor: pointer;
+                    min-height: 55px;
+                    border-radius: 0px;
+                    background: $white;
+                    position: relative;
+                    align-items: center;
+                    border: 1px solid #D9D9D9;
+                    box-shadow: 0px 0px 3px #00000029;
+                    &:not(.active) img.minus,
+                    &.active img.plus{
+                        display: none;
+                    }
+                    &.active{
+                        background-color: $secondary;
+                        .acco_sign{
+                            background-color: $secondary;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        h5{
+                            color: $white;
+                        }
+                    }
+                    h5 {
+                        margin: 0px;
+                        color: $black;
+                        position: relative;
+                    }
+                    .acco_sign {
+                        width: 57px;
+                        height: 57px;
+                        position: relative;
+                        margin-right: 45px;
+                        border-right: 2px solid #D9D9D959;
+                        background-color: $anti-flash-white;
+                        transition: all 0.3s ease-in-out;
+                        img {
+                            top: 50%;
+                            left: 50%;
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+                .acc__panel {
+                    display: none;
+                    border-top: 0;
+                    padding: 20px 20px 20px 100px;
+                }
+                /*================ Accordion End ================*/
+
+
+                .simple_list_info {
+                    margin-bottom: 80px;
+                    .row {
+                        justify-content: center;
+                    }
+                }
+                .simple_list_col {
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    margin-bottom: 8px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px;
+                        @include bold;
+                        display: flex;
+                        color: $primary;
+                        font-size: 18px;
+                        min-height: 95px;
+                        background: none;
+                        text-align: center;
+                        position: relative;
+                        align-items: center;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        -ms-flex-pack: center;
+                        -ms-flex-align: center;
+                        justify-content: center;
+                        -webkit-box-pack: center;
+                        -webkit-box-align: center;
+                        border: 2px solid $primary;
+                        &:hover {
+                            color: $white;
+                            text-decoration: none;
+                            background: $secondary;
+                            border-color: $secondary;
+                        }
+                    }
+                }
+                /*================ Button List End ================*/
+                
+                .document_era {
+                    .col-md-12 {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                }
+                .doc_block {
+                    @include semi;
+                    display: block;
+                    color: $secondary;
+                    margin-bottom: 10px;
+                    img {
+                        max-width: 17px;
+                        margin-right: 10px;
+                    }
+                    strong {
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        color: $primary;
+                        @include underline;
+                        img{
+                            filter: saturate(50%);
+                        }
+                    }
+                }
+                /*================ All content, links and image slider End ================*/
+            }
+        }
+    }
+
+    .gen_video_img{
+        margin: 0 auto;
+        text-align: center;
+        padding: 52px 52px 110px;
+    }
+    .topTitle {
+        text-align: center;
+        margin-bottom: 48px;
+        h2{
+            color: $black;
+            line-height: 40px;
+        }
+    }
+    /*================ Image Or Video End ================*/
+
+}
+
+@media (min-width: 1440.98px) {
+    .main_wrapper .page_title img{
+        width: 100%;
+        height: 689px;
+        object-fit: cover;
+    }
+}
+@media (max-width: 1199.98px) {
+    .main_wrapper .main_breadcrumb .breadcrumb{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .main_wrapper .pro_dir_filter{
+        padding-left: 0;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 991.98px) {
+    .main_wrapper .page_title h1{
+        bottom: 0;
+    }
+
+    .main_wrapper .pro_dir_filter .row .col-re .card-deck .card{
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .main_wrapper .page_title h1{
+        font-size: 32px;
+    }
+    .main_wrapper .pro_dir_filter{
+        padding-right: 0;
+    }
+    .main_wrapper .pro_dir_Wraper .searchFilterBlock{
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .main_wrapper .pro_dir_filter .row{
+        flex-direction: column;
+    }
+    .main_wrapper .pro_dir_filter .row .col-le,
+    .main_wrapper .pro_dir_filter .row .col-re{
+        max-width: 100%;
+        min-width: auto;
+    }
+    
+    .main_wrapper .pro_dir_filter .row .col-re .acc__title .acco_sign{
+        margin-right: 25px;
+    }
+    .main_wrapper .pro_dir_filter .row .col-re .acc__panel{
+        padding-left: 80px;
+    }
+
+}
+
+@media (max-width: 575px) {
+    
+    .main_wrapper .pro_dir_filter .row .col-re{
+        margin: 0 auto;
+        max-width: fit-content;
+    }
+    .main_wrapper .pro_dir_filter .row .col-re .card-deck .card{
+        margin-bottom: 15px;
+    }
+    .main_wrapper .gen_video_img{
+        padding: 52px;
+    }
+}
+
+@media (max-width: 460px) {
+    .main_wrapper .page_title .overlay-grade{
+        top: 30%;
+        height: 70%;
+    }
+    .main_wrapper .page_title img{
+        height: 215px;
+        object-fit: cover;
+    }
+}
+
+/*================================= Program Directory End =======================================*/
+
+

@@ -12,6 +12,11 @@ body {
   display: none !important;
 }
 
+.yellow {
+  color: #000000;
+  background-color: #FFD100;
+}
+
 h2,
 h3,
 h4,
