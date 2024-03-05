@@ -301,6 +301,12 @@
   .main_wrapper .pro_dir_filter .row .col-re .card-deck .card {
     flex: 0 0 calc(50% - 10px);
   }
+  .main_wrapper .pro_dir_filter .row .col-le {
+    min-width: 300px;
+  }
+  .main_wrapper .pro_dir_filter .row .col-re {
+    max-width: calc(100% - 330px);
+  }
 }
 @media (max-width: 767.98px) {
   .main_wrapper .pro_dir_filter {
