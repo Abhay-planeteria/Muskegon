@@ -195,27 +195,11 @@
 
                         <div class="view-tab">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn list-view active">List View</button>
-                                <button type="button" class="btn calendar-view">Calendar View</button>
-                                <button type="button" class="btn rss"></button>
+                                <button type="button" class="btn list-view active"><span>List View</span></button>
+                                <button type="button" class="btn calendar-view"><span>Calendar View</span></button>
+                                <button type="button" class="rss"></button>
                               </div>
 
-                            <!-- <div class="acc__main ">
-                                <div class="acc__card">
-                                    <div class="acc__title">
-                                        <div class="acco_sign">
-                                            <img class="img-responsive plus" src="img/plus.svg" alt="Plus">
-                                            <img class="img-responsive minus" src="img/minus.svg" alt="Minus">
-                                        </div>
-                                        <h5>Featured Answer</h5>
-                                    </div>
-                                    <div class="acc__panel">
-                                        <h5>Lorem ipsum dolor sit amet.</h5>
-                                        <p>Nullam interdum, enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam.</p>
-                                    </div>
-                                </div>
-        
-                            </div> -->
                         </div>
 
                     </div>
@@ -487,6 +471,11 @@
                     </div>
 
                 </div>
+
+                <div class="row m-0 calender-view-wrapper">
+                    <img src="img/calendar-img.png" alt="Calendar">
+                </div>
+
             </div>
         </div>
     </div>
@@ -572,27 +561,19 @@
         }
     });
 </script>
+
 <script>
-    (function($) {
-        /* $('.accordion_event > li:eq(0) .acco_title').addClass('active').next().slideDown();*/
+    $('.view-tab button.calendar-view').on('click', function(){
+    $('.pro_dir_filter').addClass('calender-view-active');
+        $(this).addClass('active');
+        $('.view-tab button.list-view').removeClass('active');
+    });
 
-        $('.acc__main .acc__title').click(function(j) {
-            var dropDown = $(this).closest('.acc__card').find('.acc__panel');
-
-            $(this).closest('.acc__main').find('.acc__panel').not(dropDown).slideUp();
-
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-            } else {
-                $(this).closest('.acc__main').find('.acc__title.active').removeClass('active');
-                $(this).addClass('active');
-            }
-
-            dropDown.stop(false, true).slideToggle();
-
-            j.preventDefault();
-        });
-    })(jQuery);
+    $('.view-tab button.list-view').on('click', function(){
+    $('.pro_dir_filter').removeClass('calender-view-active');
+        $(this).addClass('active');
+        $('.view-tab button.calendar-view').removeClass('active');
+    });
 </script>
 </body>
 </html>
