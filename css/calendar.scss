@@ -651,9 +651,6 @@
 }
 
 @media (max-width: 460px) {
-    .main_wrapper .pro_dir_filter .row .col-le .filter-check-Block .custom-control p{
-        //display: none;
-    }
     .main_wrapper .pro_dir_filter .row .col-le .filter-check-Block{
         flex-direction: column;
     }

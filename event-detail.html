@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Results</title>
+    <title>Event Details</title>
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/owl.carousel.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet">
-    <link href="css/result.css" rel="stylesheet">
+    <link href="css/event-detail.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- ============================= Header Start ================================== -->
-    <header class="main_header">
+    <header class="main_header temp-hide">
         <div class="navbar navbar-expand-xl">
             <div class="container-fluid">
                 <div class="logo_wrap">
@@ -112,127 +112,150 @@
             </div>
         </div>
 
-        <h1>Search Results</h1>
+        <h1>Events</h1>
     </div>
 
-    <div class="resultWraper">
-        <div class="resultmain ">
-            <div class="main_search">
-                <div class="main_search_content">
-                    <h5>You Searched for:</h5>
-                    <div class="search_box">
-                        <img class="img-responsive" src="img/search.png">
+    <div class="single_event_wrap">
+        <div class="container">
+
+            <div class="row m-0">
+                <div class="col-md-5 p-0 evt-left">
+                    <!-- <img class="img-responsive" src="img/event.png" alt=""> -->
+                    <div class="event-details-slider">
+
+                        <div id="event-details-slider-banner" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="event-details-sliderImg d-block" src="img/event.png" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="event-details-sliderImg d-block" src="img/event.png" alt="Second slide">
+                                </div>
+        
+                            </div>
+        
+                            <a class="carousel-control-prev position-absolute" href="#event-details-slider-banner" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true">&#10094;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next position-absolute" href="#event-details-slider-banner" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true">&#10095;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!-- slider end -->
                     </div>
                 </div>
-            </div>
-            <div class="rslt_txt">
-                <div class="container">
-                    <div class="top-Title text-center temp-hide">
-                        <h2>Featured Answer</h2>
-                    </div>
-                    <div class="acc__main ">
-                        <div class="acc__card">
-                            <div class="acc__title">
-                                <div class="acco_sign">
-                                    <img class="img-responsive plus" src="img/plus.svg" alt="Plus">
-                                    <img class="img-responsive minus" src="img/minus.svg" alt="Minus">
-                                </div>
-                                <h5>Featured Answer</h5>
-                            </div>
-                            <div class="acc__panel">
-                                <h5>Lorem ipsum dolor sit amet.</h5>
-                                <p>Nullam interdum, enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam.</p>
-                            </div>
+                <div class="col-md-7 pr-0 evt-right">
+
+                    <div class="event-details">
+                        <h2>TITLE OF EVENT</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie aliquam erat, ut accumsan turpis placerat sed. Donec dapibus nisl ut pellentesque suscipit. Nullam interdum, enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam. Mauris blandit iaculis sapien ac pellentesque. Duis fermentum mollis.
+                        </p>
+                        <h4>
+                            TUESDAY, JUN. 20, 2022 <br>
+                            <span>10 a.m - 1 p.m.</span>
+                        </h4>
+                        <div class="document_era">
+                            <a href="#" class="doc_block">
+                                <img src="img/icon-add-calendar.svg" alt="Add Calendar"><span>Add to Calendar</span>
+                            </a>
                         </div>
-                        <div class="acc__card">
-                            <div class="acc__title">
-                                <div class="acco_sign">
-                                    <img class="img-responsive plus" src="img/plus.svg" alt="Plus">
-                                    <img class="img-responsive minus" src="img/minus.svg" alt="Minus">
+
+                        <p class="m-0">Location Information</p>
+                        <h5>
+                            <a href="#"> Address Line One <br>City, ST 01010</a>
+                        </h5>
+
+                        <a href="#" class="btn_normal">REGISTER FOR EVENT</a>
+
+                        
+                        <div id="up-events" class="row justify-content-center position-relative">
+                            <div class="container-fluid p-0">
+                                <h3 class="text-center">More Event Dates</h3>
+                                <div id="up-events-carousel" class="owl-carousel">
+
+                                    <div class="event-box d-flex">
+                                        <div class="event-date">
+                                            <span class="event-day">Sat</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">23</span>
+                                        </div>
+                                        <div class="event-content">
+                                            <h5>10am - 1pm</h5>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-add-calendar.svg" alt="Add Calendar"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-box d-flex">
+                                        <div class="event-date">
+                                            <span class="event-day">Sun</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">24</span>
+                                        </div>
+                                        <div class="event-content">
+                                            <h5>10am - 1pm</h5>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-add-calendar.svg" alt="Add Calendar"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-box d-flex">
+                                        <div class="event-date">
+                                            <span class="event-day">Sat</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">23</span>
+                                        </div>
+                                        <div class="event-content">
+                                            <h5>10am - 1pm</h5>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-add-calendar.svg" alt="Add Calendar"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-box d-flex">
+                                        <div class="event-date">
+                                            <span class="event-day">Sun</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">24</span>
+                                        </div>
+                                        <div class="event-content">
+                                            <h5>10am - 1pm</h5>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-add-calendar.svg" alt="Add Calendar"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <h5>Featured Answer</h5>
-                            </div>
-                            <div class="acc__panel">
-                                <h5>Lorem ipsum dolor sit amet.</h5>
-                                <p>Nullam interdum, enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam.</p>
+                                <!-- OWL carousel End -->
+
+                                <p class="text-center">(14) Remaining dates for this event</p>
+
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="resull_filter row no-margin">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-le">
-                        <div class="searchFilterBlock">
-                            <div class="filterBlock">
-                                <div class="form-group">
-                                    <label class="title" for="">Filter by</label>
-                                    <select class="form-control" id="">
-                                    <option>By Content Type</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                                </div>
 
-                            </div>
-                        </div>
                     </div>
-                    <div class="col-lg-9 col-md-8 col-re">
-                        <div class="filterBlocks">
-                            <div class="title-sort">
-                                <div class="more-title">
-                                    <h2>More Results</h2>
-                                </div>
-                                <div class="sort_boxResult" id="sortBox">
-                                    <label class="" for="">Sort</label>
-                                    <select id="" class="form-control">
-                                    <option>Sort</option>
-                                    <option>All</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="result_row">
-                                <a href="#">
-                                    <div class="re_category">
-                                        <h3>Search Result Title</h3>
-                                    </div>
-                                    <div class="rsltBody">
-                                        <h5>CONTENT TYPE</h5>
-                                        <p>
-                                            Enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam. Ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam. Enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex.
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="result_row">
-                                <a href="#">
-                                    <div class="re_category">
-                                        <h3>Longer Search Result Title that might need two lines to display properly or might be a url or longer entry</h3>
-                                    </div>
-                                    <div class="rsltBody">
-                                        <h5>CONTENT TYPE</h5>
-                                        <p>
-                                            Enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam. Ipsum risus ultrices nunc, nec dignissim libero felis in ex. Donec non sem accumsan, suscipit magna id, auctor quam. Enim aliquam lacinia interdum, ipsum risus ultrices nunc, nec dignissim libero felis in ex.
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="pagination justify-content-center">
-                            <img src="img/pagination.png" alt="">
-                        </div>
-                    </div>
+
                 </div>
             </div>
+
         </div>
+
     </div>
+
+
 </div>
 <!-- ============================= Main Page content section End ================================== -->
 
@@ -316,26 +339,45 @@
     });
 </script>
 <script>
-    (function($) {
-        /* $('.accordion_event > li:eq(0) .acco_title').addClass('active').next().slideDown();*/
-
-        $('.acc__main .acc__title').click(function(j) {
-            var dropDown = $(this).closest('.acc__card').find('.acc__panel');
-
-            $(this).closest('.acc__main').find('.acc__panel').not(dropDown).slideUp();
-
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-            } else {
-                $(this).closest('.acc__main').find('.acc__title.active').removeClass('active');
-                $(this).addClass('active');
+    $(document).ready(function() {
+       
+        
+        $('#up-events-carousel').owlCarousel({
+            loop: true,
+            dots:false,
+            margin: 10,
+            nav: true,
+            autoplay:true,
+            navText: [
+                '<a class="carousel-control-prev position-absolute"><span class="carousel-control-prev-icon" aria-hidden="true">&#10094;</span></a>',
+                '<a class="carousel-control-next position-absolute"><span class="carousel-control-next-icon" aria-hidden="true">&#10095;</span></a>'
+            ],
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items: 1,
+                    nav:true
+                },
+                550:{
+                    items: 2,
+                    nav:true
+                },
+                991:{
+                    items: 1,
+                    nav:true
+                },
+                1190:{
+                    items: 1,
+                    nav:true
+                },
+                1200:{
+                    items: 2,
+                    nav:true
+                }
             }
-
-            dropDown.stop(false, true).slideToggle();
-
-            j.preventDefault();
         });
-    })(jQuery);
+        
+    });
 </script>
 </body>
 </html>
