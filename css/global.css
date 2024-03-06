@@ -213,7 +213,7 @@ strong {
   color: #fff !important;
 }
 .wp-block-button__link:hover::before {
-  width: 101%;
+  width: 100%;
   background: #03246A;
 }
 
