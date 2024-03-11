@@ -11,8 +11,7 @@
     <link href="css/owl.carousel.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
@@ -97,260 +96,124 @@
 <!-- ============================= Main Page content section End ================================== -->
 
 <div class="main_wrapper">
+    <div class="main_wrap_calendar">
 
-    <div class="page_title text-center">
+        <div class="page_title text-center">
 
-        <div class="main_breadcrumb">
-            <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#"> Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Section Title </a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Page Title</li>
-                    </ol>
-                </nav>
+            <div class="main_breadcrumb">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"> Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Section Title </a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Page Title</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
+
+            <h1>CALENDAR</h1>
         </div>
 
-        <h1>CALENDAR</h1>
-    </div>
+        <div class="pro_dir_Wraper">
 
-    <div class="pro_dir_Wraper">
+            <div class="pro_dir_filter row no-margin">
+                <div class="container position-relative">
+                    <div class="row m-0">
+                        
+                        <div class="col-le">
+                            <div class="searchFilterBlock">
+                                
+                                <div class="search_box">
+                                    <form action="/search" role="search" method="get" id="searchform">
+                                        <div class="input-group">
+                                            <input type="text" id="searchbox" class="form-control" placeholder="Search" name="keys" aria-label="Search Programs">
+                                            <button class="btn btn-default" id="searchsubmit" type="submit">
+                                                <img src="img/icon-404-search.svg" alt="">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
 
-        <div class="pro_dir_filter row no-margin">
-            <div class="container position-relative">
-                <div class="row m-0">
-                    
-                    <div class="col-le">
-                        <div class="searchFilterBlock">
-                            
-                            <div class="search_box">
-                                <form action="/search" role="search" method="get" id="searchform">
-                                    <div class="input-group">
-                                        <input type="text" id="searchbox" class="form-control" placeholder="Search" name="keys" aria-label="Search Programs">
-                                        <button class="btn btn-default" id="searchsubmit" type="submit">
-                                            <img src="img/icon-404-search.svg" alt="">
-                                        </button>
+                                <div class="filterBlock">
+                                    <h5>Filter by date:</h5>
+                                    <div class="form-group d-flex">
+                                        <select class="form-control" id="">
+                                            <option>Month</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                        <select class="form-control" id="">
+                                            <option>Year</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <form action="#" role="search" method="get" id="">
+                                    <h5>Event Type</h5>
+                                    <div class="filter-check-Block d-flex">
+                                        <div class="custom-control custom-checkbox d-flex academic">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1"></label>
+                                            <div class="custom-control-icon"></div>
+                                            <p>Academic Calendar</p>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-flex athletics">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2"></label>
+                                            <div class="custom-control-icon"></div>
+                                            <p>Athletics</p>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-flex campus">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3"></label>
+                                            <div class="custom-control-icon"></div>
+                                            <p>Campus Events</p>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-flex performing">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                            <label class="custom-control-label" for="customCheck4"></label>
+                                            <div class="custom-control-icon"></div>
+                                            <p>Performing Arts</p>
+                                        </div>
+                                        <div class="custom-control custom-checkbox d-flex">
+                                            <button class="btn btn-default" id="reset_filter" type="submit">
+                                                <img src="img/icon-reset.svg" alt="">
+                                            </button>
+                                            <h5>RESET FILTERS</h5>
+                                        </div>
                                     </div>
                                 </form>
+
                             </div>
 
-                            <div class="filterBlock">
-                                <h5>Filter by date:</h5>
-                                <div class="form-group d-flex">
-                                    <select class="form-control" id="">
-                                        <option>Month</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                    <select class="form-control" id="">
-                                        <option>Year</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
+                            <div class="view-tab">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn list-view active"><span>List View</span></button>
+                                    <button type="button" class="btn calendar-view"><span>Calendar View</span></button>
+                                    <button type="button" class="rss"></button>
                                 </div>
-                            </div>
 
-                            <form action="#" role="search" method="get" id="">
-                                <h5>Event Type</h5>
-                                <div class="filter-check-Block d-flex">
-                                    <div class="custom-control custom-checkbox d-flex academic">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1"></label>
-                                        <div class="custom-control-icon"></div>
-                                        <p>Academic Calendar</p>
-                                    </div>
-                                    <div class="custom-control custom-checkbox d-flex athletics">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                        <label class="custom-control-label" for="customCheck2"></label>
-                                        <div class="custom-control-icon"></div>
-                                        <p>Athletics</p>
-                                    </div>
-                                    <div class="custom-control custom-checkbox d-flex campus">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                        <label class="custom-control-label" for="customCheck3"></label>
-                                        <div class="custom-control-icon"></div>
-                                        <p>Campus Events</p>
-                                    </div>
-                                    <div class="custom-control custom-checkbox d-flex performing">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                        <label class="custom-control-label" for="customCheck4"></label>
-                                        <div class="custom-control-icon"></div>
-                                        <p>Performing Arts</p>
-                                    </div>
-                                    <div class="custom-control custom-checkbox d-flex">
-                                        <button class="btn btn-default" id="reset_filter" type="submit">
-                                            <img src="img/icon-reset.svg" alt="">
-                                        </button>
-                                        <h5>RESET FILTERS</h5>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
 
                         </div>
 
-                        <div class="view-tab">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn list-view active"><span>List View</span></button>
-                                <button type="button" class="btn calendar-view"><span>Calendar View</span></button>
-                                <button type="button" class="rss"></button>
-                              </div>
+                        <div class="col-re">
 
-                        </div>
-
-                    </div>
-
-                    <div class="col-re">
-
-                        <h2>SEPTEMBER 2023</h2>
-                        <div class="event-box-wrapper">
-                            <div class="event-box d-flex academic">
-                                <div class="event-date">
-                                    <div>
-                                        <span class="event-day">Sat</span>
-                                        <span class="event-month">Sep</span>
-                                        <span class="event-day-date">23</span>
-                                    </div>
-                                </div>
-                                <div class="event-body">
-                                    <div class="event-content d-flex">
-                                        <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
-                                        <div class="content-footer">
-                                            <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                            <p class="icon-location">Location Information</p>
-                                        </div>
-                                    </div>
-                                    <div class="document_era">
-                                        <a href="#" class="doc_block">
-                                            <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-box d-flex athletics">
-                                <div class="event-date">
-                                    <div>
-                                        <span class="event-day">Sun</span>
-                                        <span class="event-month">Sep</span>
-                                        <span class="event-day-date">24</span>
-                                    </div>
-                                </div>
-                                <div class="event-body">
-                                    <div class="event-content d-flex">
-                                        <h3><a href="#">Title of an Event</a></h3>
-                                        <div class="content-footer">
-                                            <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                            <p class="icon-location">Location Information</p>
-                                        </div>
-                                    </div>
-                                    <div class="document_era">
-                                        <a href="#" class="doc_block">
-                                            <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-box d-flex campus">
-                                <div class="event-date">
-                                    <div>
-                                        <span class="event-day">Sat</span>
-                                        <span class="event-month">Sep</span>
-                                        <span class="event-day-date">23</span>
-                                    </div>
-                                </div>
-                                <div class="event-body">
-                                    <div class="event-content">
-                                        <h3><a href="#">Title of an Event such as Deadline, etc. that doesn't necessarily need a time or a location</a></h3>
-                                        <p>Additional Information If needed</p>
-                                    </div>
-                                    <div class="document_era">
-                                        <a href="#" class="doc_block">
-                                            <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-box d-flex performing">
-                                <div class="event-date">
-                                    <div>
-                                        <span class="event-day">Sun</span>
-                                        <span class="event-month">Sep</span>
-                                        <span class="event-day-date">24</span>
-                                    </div>
-                                </div>
-                                <div class="event-body">
-                                    <div class="event-content d-flex">
-                                        <h3><a href="#">Title of an All Day Event that doesn't need to show time</a></h3>
-                                        <div class="content-footer">
-                                            <p class="icon-location">Location Information<br>Location Information Line 2</p>
-                                        </div>
-                                    </div>
-                                    <div class="document_era">
-                                        <a href="#" class="doc_block">
-                                            <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-box d-flex academic">
-                                <div class="event-date">
-                                    <div>
-                                        <span class="event-day">Sat</span>
-                                        <span class="event-month">Sep</span>
-                                        <span class="event-day-date">23</span>
-                                    </div>
-                                </div>
-                                <div class="event-body">
-                                    <div class="event-content d-flex">
-                                        <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
-                                        <div class="content-footer">
-                                            <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                            <p class="icon-location">Location Information</p>
-                                        </div>
-                                    </div>
-                                    <div class="document_era">
-                                        <a href="#" class="doc_block">
-                                            <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-box d-flex athletics">
-                                <div class="event-date">
-                                    <div>
-                                        <span class="event-day">Sun</span>
-                                        <span class="event-month">Sep</span>
-                                        <span class="event-day-date">24</span>
-                                    </div>
-                                </div>
-                                <div class="event-body">
-                                    <div class="event-content d-flex">
-                                        <h3><a href="#">Title of an Event</a></h3>
-                                        <div class="content-footer">
-                                            <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                            <p class="icon-location">Location Information</p>
-                                        </div>
-                                    </div>
-                                    <div class="document_era">
-                                        <a href="#" class="doc_block">
-                                            <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <h2>OCTOBER 2023</h2>
+                            <h2>SEPTEMBER 2023</h2>
                             <div class="event-box-wrapper">
                                 <div class="event-box d-flex academic">
                                     <div class="event-date">
                                         <div>
                                             <span class="event-day">Sat</span>
-                                            <span class="event-month">Oct</span>
-                                            <span class="event-day-date">1</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">23</span>
                                         </div>
                                     </div>
                                     <div class="event-body">
@@ -358,7 +221,7 @@
                                             <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
                                             <div class="content-footer">
                                                 <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                                <p class="icon-location">Location Information <br>Location Information Line 2</p>
+                                                <p class="icon-location">Location Information</p>
                                             </div>
                                         </div>
                                         <div class="document_era">
@@ -372,8 +235,8 @@
                                     <div class="event-date">
                                         <div>
                                             <span class="event-day">Sun</span>
-                                            <span class="event-month">Oct</span>
-                                            <span class="event-day-date">2</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">24</span>
                                         </div>
                                     </div>
                                     <div class="event-body">
@@ -395,17 +258,14 @@
                                     <div class="event-date">
                                         <div>
                                             <span class="event-day">Sat</span>
-                                            <span class="event-month">Oct</span>
-                                            <span class="event-day-date">5</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">23</span>
                                         </div>
                                     </div>
                                     <div class="event-body">
                                         <div class="event-content">
-                                            <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
-                                            <div class="content-footer">
-                                                <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                                <p class="icon-location">Location Information <br>Location Information Line 2</p>
-                                            </div>
+                                            <h3><a href="#">Title of an Event such as Deadline, etc. that doesn't necessarily need a time or a location</a></h3>
+                                            <p>Additional Information If needed</p>
                                         </div>
                                         <div class="document_era">
                                             <a href="#" class="doc_block">
@@ -418,8 +278,53 @@
                                     <div class="event-date">
                                         <div>
                                             <span class="event-day">Sun</span>
-                                            <span class="event-month">Oct</span>
-                                            <span class="event-day-date">15</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">24</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-body">
+                                        <div class="event-content d-flex">
+                                            <h3><a href="#">Title of an All Day Event that doesn't need to show time</a></h3>
+                                            <div class="content-footer">
+                                                <p class="icon-location">Location Information<br>Location Information Line 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="document_era">
+                                            <a href="#" class="doc_block">
+                                                <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="event-box d-flex academic">
+                                    <div class="event-date">
+                                        <div>
+                                            <span class="event-day">Sat</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">23</span>
+                                        </div>
+                                    </div>
+                                    <div class="event-body">
+                                        <div class="event-content d-flex">
+                                            <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
+                                            <div class="content-footer">
+                                                <p class="icon-clock">10:00 am - 2:00 pm</p>
+                                                <p class="icon-location">Location Information</p>
+                                            </div>
+                                        </div>
+                                        <div class="document_era">
+                                            <a href="#" class="doc_block">
+                                                <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="event-box d-flex athletics">
+                                    <div class="event-date">
+                                        <div>
+                                            <span class="event-day">Sun</span>
+                                            <span class="event-month">Sep</span>
+                                            <span class="event-day-date">24</span>
                                         </div>
                                     </div>
                                     <div class="event-body">
@@ -437,49 +342,145 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <h2>NOVEMBER 2023</h2>
-                            <div class="event-box-wrapper">
-                                <div class="event-box d-flex athletics">
-                                    <div class="event-date">
-                                        <div>
-                                            <span class="event-day">Sun</span>
-                                            <span class="event-month">Nov</span>
-                                            <span class="event-day-date">24</span>
-                                        </div>
-                                    </div>
-                                    <div class="event-body">
-                                        <div class="event-content d-flex">
-                                            <h3><a href="#">Title of an Event</a></h3>
-                                            <div class="content-footer">
-                                                <p class="icon-clock">10:00 am - 2:00 pm</p>
-                                                <p class="icon-location">Location Information <br>Location Information Line 2</p>
+                                
+                                <h2>OCTOBER 2023</h2>
+                                <div class="event-box-wrapper">
+                                    <div class="event-box d-flex academic">
+                                        <div class="event-date">
+                                            <div>
+                                                <span class="event-day">Sat</span>
+                                                <span class="event-month">Oct</span>
+                                                <span class="event-day-date">1</span>
                                             </div>
                                         </div>
-                                        <div class="document_era">
-                                            <a href="#" class="doc_block">
-                                                <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
-                                            </a>
+                                        <div class="event-body">
+                                            <div class="event-content d-flex">
+                                                <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
+                                                <div class="content-footer">
+                                                    <p class="icon-clock">10:00 am - 2:00 pm</p>
+                                                    <p class="icon-location">Location Information <br>Location Information Line 2</p>
+                                                </div>
+                                            </div>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-box d-flex athletics">
+                                        <div class="event-date">
+                                            <div>
+                                                <span class="event-day">Sun</span>
+                                                <span class="event-month">Oct</span>
+                                                <span class="event-day-date">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="event-body">
+                                            <div class="event-content d-flex">
+                                                <h3><a href="#">Title of an Event</a></h3>
+                                                <div class="content-footer">
+                                                    <p class="icon-clock">10:00 am - 2:00 pm</p>
+                                                    <p class="icon-location">Location Information</p>
+                                                </div>
+                                            </div>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-box d-flex campus">
+                                        <div class="event-date">
+                                            <div>
+                                                <span class="event-day">Sat</span>
+                                                <span class="event-month">Oct</span>
+                                                <span class="event-day-date">5</span>
+                                            </div>
+                                        </div>
+                                        <div class="event-body">
+                                            <div class="event-content">
+                                                <h3><a href="#">Title of an Event That needs two lines to display Title of an Event that needs two lines</a></h3>
+                                                <div class="content-footer">
+                                                    <p class="icon-clock">10:00 am - 2:00 pm</p>
+                                                    <p class="icon-location">Location Information <br>Location Information Line 2</p>
+                                                </div>
+                                            </div>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="event-box d-flex performing">
+                                        <div class="event-date">
+                                            <div>
+                                                <span class="event-day">Sun</span>
+                                                <span class="event-month">Oct</span>
+                                                <span class="event-day-date">15</span>
+                                            </div>
+                                        </div>
+                                        <div class="event-body">
+                                            <div class="event-content d-flex">
+                                                <h3><a href="#">Title of an Event</a></h3>
+                                                <div class="content-footer">
+                                                    <p class="icon-clock">10:00 am - 2:00 pm</p>
+                                                    <p class="icon-location">Location Information</p>
+                                                </div>
+                                            </div>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                
+                                <h2>NOVEMBER 2023</h2>
+                                <div class="event-box-wrapper">
+                                    <div class="event-box d-flex athletics">
+                                        <div class="event-date">
+                                            <div>
+                                                <span class="event-day">Sun</span>
+                                                <span class="event-month">Nov</span>
+                                                <span class="event-day-date">24</span>
+                                            </div>
+                                        </div>
+                                        <div class="event-body">
+                                            <div class="event-content d-flex">
+                                                <h3><a href="#">Title of an Event</a></h3>
+                                                <div class="content-footer">
+                                                    <p class="icon-clock">10:00 am - 2:00 pm</p>
+                                                    <p class="icon-location">Location Information <br>Location Information Line 2</p>
+                                                </div>
+                                            </div>
+                                            <div class="document_era">
+                                                <a href="#" class="doc_block">
+                                                    <img src="img/icon-calendar.svg" alt="pdf"><span>Add to Calendar</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
+                            </div>
+                            
                         </div>
-                        
+
+                    </div>
+
+                    <div class="row m-0 calender-view-wrapper">
+                        <img src="img/calendar-img.png" alt="Calendar">
                     </div>
 
                 </div>
-
-                <div class="row m-0 calender-view-wrapper">
-                    <img src="img/calendar-img.png" alt="Calendar">
-                </div>
-
             </div>
         </div>
+        
     </div>
-    
 </div>
 <!-- ============================= Main Page content section End ================================== -->
 

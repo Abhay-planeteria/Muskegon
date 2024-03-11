@@ -11,8 +11,7 @@
     <link href="css/owl.carousel.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/result.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
@@ -96,33 +95,29 @@
 
 <!-- ============================= Main Page content section End ================================== -->
 
-<div class="main_wrapper">
-
-    <div class="no-found-wraper">
-        <div class="container">
-            <div class="no-found-info d-flex justify-content-center">
+<div class="main_wrapper no-found-wraper">
+    <div class="container">
+        <div class="no-found-info d-flex justify-content-center">
+            <div>
+                <h2>404</h2>
+            </div>
+            <div class="search_box">
+                <h1>PAGE NOT FOUND</h1>
+                <h3>We couldn't Find this page. Can we help you find something else?</h3>
                 <div>
-                    <h2>404</h2>
+                    <form action="/search" role="search" method="get" id="searchform">
+                        <div class="input-group">
+                            <input type="text" id="searchbox" class="form-control" placeholder="Search" name="keys" aria-label="Search Box">
+                            <button class="btn btn-default" id="searchsubmit" type="submit">
+                                <img src="img/icon-404-search.svg" alt="">
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="search_box">
-                    <h1>PAGE NOT FOUND</h1>
-                    <h3>We couldn't Find this page. Can we help you find something else?</h3>
-                    <div>
-                        <form action="/search" role="search" method="get" id="searchform">
-                            <div class="input-group">
-                                <input type="text" id="searchbox" class="form-control" placeholder="Search" name="keys" aria-label="Search Box">
-                                <button class="btn btn-default" id="searchsubmit" type="submit">
-                                    <img src="img/icon-404-search.svg" alt="">
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <a href="#" class="btn_normal">BACK TO HOME</a>
-                </div>
+                <a href="#" class="btn_normal">BACK TO HOME</a>
             </div>
         </div>
     </div>
-
 </div>
 <!-- ============================= Main Page content section End ================================== -->
 
