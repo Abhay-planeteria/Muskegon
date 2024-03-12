@@ -72,8 +72,8 @@ h6 {
 p {
     color: $black;
     font-size: 16px;
-    line-height: 21px;
     font-weight: 500;
+    line-height: 21px;
 }
 
 p.has-large-font-size {
@@ -312,6 +312,135 @@ label.title {
     color: #000 !important;
 }
 
+/*================ Page Title/Breadcrumb Start ================*/
+
+.page_title_wrapper{
+    
+    &.has_title_bg{
+        .page_title{
+            padding-top: 65px;
+            margin-bottom: 40px;
+            background-color: $anti-flash-white;
+            h1{
+                display: inline-block;
+            }
+        }
+        .main_breadcrumb{
+            top: 0;
+            width: 100%;
+            padding: 0 160px;
+            position: absolute;
+        }
+    }
+    
+    &.has_title_bg_builder{
+        .page_title{
+            margin-bottom: 0;
+            padding-top: 50px;
+            padding-bottom: 58px;
+            background-color: $secondary;
+            h1{
+                color: $white;
+                margin-bottom: 0;
+                display: inline-block;
+            }
+        }
+    }
+
+    &.has_img{
+        .page_title{
+            margin-bottom: 0px;
+            h1{
+                left: 50%;
+                z-index: 2;
+                width: 100%;
+                bottom: 30px;
+                color: $white;
+                padding: 0 15px;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+            .overlay-grade{
+                left: 0;
+                right: 0;
+                top: 50%;
+                bottom: 0;
+                z-index: 1;
+                width: 100%;
+                height: 50%;
+                position: absolute;
+                background: linear-gradient(0deg, rgb(8, 8, 8) 0%, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
+            }
+        }
+    }
+
+    .main_breadcrumb{
+        z-index: 2;
+        position: relative;
+        padding: 0 100px;
+        .breadcrumb{
+            padding: 0.75rem 0;
+            background-color: transparent;
+            .breadcrumb-item+.breadcrumb-item{
+                padding-left: 0.25rem;
+                &::before{
+                    content: ">";
+                    @include bold;
+                    color: $primary;
+                    padding-right: 0.25rem;
+                }
+                &.active{
+                    color: $primary;
+                    @include regular;
+                }
+            }
+            a{
+                @include semi;
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440.98px) {
+    .page_title_wrapper.has_img .page_title img{
+        width: 100%;
+        height: 689px;
+        object-fit: cover;
+    }
+}
+@media (max-width: 1199.98px) {
+    .page_title_wrapper.has_title_bg .main_breadcrumb,
+    .page_title_wrapper .main_breadcrumb{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (max-width: 991.98px) {
+    .page_title_wrapper.has_img .page_title h1{
+        bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page_title_wrapper.has_title_bg .page_title h1,
+    .page_title_wrapper.has_img .page_title h1{
+        font-size: 32px;
+    }
+}
+@media (max-width: 460px) {
+    .page_title_wrapper.has_img .page_title .overlay-grade{
+        top: 30%;
+        height: 70%;
+    }
+    .page_title_wrapper.has_img .page_title img{
+        height: 215px;
+        object-fit: cover;
+    }
+}
+/*================ Page Title/Breadcrumb End ================*/
+
+
 /*================================= Pre-defined properties End =======================================*/
 
 /*================================= Main Header Start =======================================*/
@@ -477,12 +606,30 @@ label.title {
             border-radius: 0px;
         }
         .searchbardiv {
+            top: 60px;
+            right: 0px;
+            width: 100%;
             display: none;
-            max-width: 250px;
+            max-width: 441px;
+            min-width: 441px;
+            padding-top: 15px;
+            background: #fff;
+            position: absolute;
+            padding: 20px 20px 5px 10px;
+            box-shadow: 0px 0px 6px #00000029;
         }
         .buttonsearch {
             border: 0;
-            background: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background: transparent;
+            &:hover{
+                background: #D7DDDD;
+            }
+            &:focus{
+                border: none;
+            }
             img {
                 max-width: 25px;
             }
@@ -502,36 +649,49 @@ label.title {
         .proinput {
             min-width: 250px;
         }
+        .promagnifier{
+            display: none;
+        }
+        .proclose{
+            right: 30px !important;
+            display: flex !important;
+            position: absolute !important;
+            svg{
+                padding: 0 !important;
+                fill: $secondary !important;
+                background: transparent !important;
+            }
+        }
         .proinput input.orig {
-            color: #000 !important;
-            font-size: 15px !important;
-            font-weight: 600 !important;
+            color: #0C0D0F !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
             padding-bottom: 4px !important;
             font-family: "gill", sans-serif !important;
-            border-bottom: 1px solid #000 !important;
+            border-bottom: 1px solid #0C0D0F !important;
         }
          ::-webkit-input-placeholder {
-            color: #000 !important;
-            font-size: 15px !important;
-            font-weight: 600 !important;
+            color: #0C0D0F !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
             font-family: "gill", sans-serif !important;
         }
          ::-moz-placeholder {
-            color: #000 !important;
-            font-size: 15px !important;
-            font-weight: 600 !important;
+            color: #0C0D0F !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
             font-family: "gill", sans-serif !important;
         }
          :-ms-input-placeholder {
-            color: #000 !important;
-            font-size: 15px !important;
-            font-weight: 600 !important;
+            color: #0C0D0F !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
             font-family: "gill", sans-serif !important;
         }
          :-moz-placeholder {
-            color: #000 !important;
-            font-size: 15px !important;
-            font-weight: 600 !important;
+            color: #0C0D0F !important;
+            font-size: 16px !important;
+            font-weight: normal !important;
             font-family: "gill", sans-serif !important;
         }
     }
@@ -728,6 +888,32 @@ label.title {
                 .footer-social{
                     gap: 4px;
                     margin-top: 14px;
+                    ul{
+                        gap: 4px;
+                        margin: 0;
+                        display: flex;
+                        list-style: none;
+                        padding-inline-start: 0;
+                        justify-content: center;
+                        li a{
+                            width: 24px;
+                            height: 24px;
+                            position: relative;
+                            border-radius: 100%;
+                            display: inline-block;
+                            background-color: $cyber-yellow;
+                            img{
+                                top: 50%;
+                                left: 50%;
+                                position: absolute;
+                                max-width: max-content;
+                                transform: translate(-50%, -50%);
+                            }
+                            &:hover{
+                                background-color: $white;
+                            }
+                        }
+                    }
                     a.social-link{
                         margin: 0;
                         width: 24px;
@@ -778,14 +964,17 @@ label.title {
                     padding: 0px 15px 8px 8px;
                     border-bottom: solid 1px $cyber-yellow;
                 }
-                .footer-links{
+                .footer-links ul{
+                    margin: 0;
                     display: grid;
+                    list-style: none;
                     column-gap: 60px;
                     padding-left: 8px;
                     padding-right: 15px;
                     grid-template-rows: repeat(3, 1fr);
                     grid-template-columns: repeat(3, 1fr);
                     a{
+                        padding: 0;
                         color: $white;
                         @include regular;
                     }
@@ -796,12 +985,20 @@ label.title {
                 align-self: center;
             }
             &-copyright{
-                gap: 10px;
                 width: 100%;
-                bottom: 20px;
                 @extend .footer;
                 @include regular;
-                position: absolute;
+                p{
+                    gap: 10px;
+                    width: 100%;
+                    bottom: 20px;
+                    display: flex;
+                    color: $white;
+                    margin-bottom: 0;
+                    position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                }
                 span, a{
                     color: $white;
                     font-size: 11px;
@@ -1768,7 +1965,6 @@ label.title {
 
 /*================================= Page Builder Start =======================================*/
 .main_wrapper{
-    .main_wrap_page_builder{
         p {
             line-height: 24px;
             margin-bottom: 20px;
@@ -1786,62 +1982,6 @@ label.title {
         >section {
             padding: 80px 0px;
         }
-
-        .page_title{
-            padding: 60px 15px;
-            margin-bottom: 15px;
-            position: relative;
-            background-color: $secondary;
-            &::after{
-                left: 0;
-                top: 100%;
-                opacity: 1;
-                z-index: 1;
-                content: "";
-                height: 67px;
-                padding-left: 100%;
-                position: absolute;
-                background-color: $anti-flash-white;
-                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
-                -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
-                    -ms-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
-                    -o-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
-                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
-            }
-            h1{
-                color: $white;
-                margin-bottom: 0;
-            }
-        }
-        /*================ Page Title End ================*/
-
-        .main_breadcrumb{
-            z-index: 2;
-            position: relative;
-            padding-bottom: 52px;
-            .breadcrumb{
-                padding: 0.75rem 8rem;
-                background-color: transparent;
-                .breadcrumb-item+.breadcrumb-item{
-                    padding-left: 0.25rem;
-                    &::before{
-                        content: ">";
-                        @include bold;
-                        color: $primary;
-                        padding-right: 0.25rem;
-                    }
-                    &.active{
-                        color: $primary;
-                        @include regular;
-                    }
-                }
-                a{
-                    @include semi;
-                    color: $primary;
-                }
-            }
-        }
-        /*================ Breadcrumb End ================*/
 
         .middle_wrap{
             padding: 0;
@@ -2472,16 +2612,9 @@ label.title {
             }
         }
         /*================ Contact Card End ================*/
-        
-    }
+
 }
 
-@media (max-width: 1199.98px) {
-    .main_wrapper .main_wrap_page_builder .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
 
 @media (min-width: 767.98px) and (max-width: 1024px) {
     .contact_col {
@@ -2611,55 +2744,6 @@ label.title {
 /*================================= Academic Department Details Start =======================================*/
 
 .main_wrap_academic_detail{
-    .page_title{
-        margin-bottom: 0px;
-        h1{
-            left: 50%;
-            z-index: 2;
-            width: 100%;
-            bottom: 30px;
-            color: $white;
-            padding: 0 15px;
-            position: absolute;
-            transform: translateX(-50%);
-        }
-        .overlay-grade{
-            left: 0;
-            right: 0;
-            top: 50%;
-            bottom: 0;
-            z-index: 1;
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            background: linear-gradient(0deg, rgb(8, 8, 8) 0%, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            margin-bottom: 35px;
-            padding: 12px 100px 0;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
-    
 
     .pro_dir_Wraper .searchFilterBlock {
         //padding: 36px 20px 50px;
@@ -3162,28 +3246,14 @@ label.title {
 
 }
 
-@media (min-width: 1440.98px) {
-    .main_wrap_academic_detail .page_title img{
-        width: 100%;
-        height: 689px;
-        object-fit: cover;
-    }
-}
 @media (max-width: 1199.98px) {
-    .main_wrap_academic_detail .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
+    
     .main_wrap_academic_detail .pro_dir_filter{
         padding-left: 0;
         padding-right: 15px;
     }
 }
 @media (max-width: 991.98px) {
-    .main_wrap_academic_detail .page_title h1{
-        bottom: 0;
-    }
-
     .main_wrap_academic_detail .pro_dir_filter .row .col-re .card-deck .card{
         flex: 0 0 calc(50% - 10px);
     }
@@ -3197,9 +3267,6 @@ label.title {
 }
 
 @media (max-width: 767.98px) {
-    .main_wrap_academic_detail .page_title h1{
-        font-size: 32px;
-    }
     .main_wrap_academic_detail .pro_dir_filter{
         padding-right: 0;
     }
@@ -3235,15 +3302,6 @@ label.title {
 }
 
 @media (max-width: 460px) {
-    .main_wrap_academic_detail .page_title .overlay-grade{
-        top: 30%;
-        height: 70%;
-    }
-    .main_wrap_academic_detail .page_title img{
-        height: 215px;
-        object-fit: cover;
-    }
-    
     .main_wrap_academic_detail .pro_dir_filter .row .col-re .expanding-grid .links > li{
         width: 100%;
     }
@@ -3254,36 +3312,6 @@ label.title {
 /*================================= Academic Office Directory Start =======================================*/
 
 .main_wrap_academic_dir{
-    .page_title{
-        margin-bottom: 40px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
     
     .img_text_card{
         margin: 0 auto;
@@ -3410,55 +3438,11 @@ label.title {
     
 }
 
-@media (max-width: 1199.98px) {
-    .main_wrap_academic_dir .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-}
-
-@media (max-width: 460px) {
-    .main_wrap_academic_dir .page_title h1{
-        font-size: 36px;
-    }
-}
-
 /*=================================  Academic Office Directory End =======================================*/
 
 /*================================= Event Details Start =======================================*/
 
 .main_wrap_event_detail{
-    .page_title{
-        margin-bottom: 40px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
 
     .event-details-slider{
         z-index: 1;
@@ -3694,10 +3678,6 @@ label.title {
 }
 
 @media (max-width: 1199.98px) {
-    .main_wrap_event_detail .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     
     .main_wrap_event_detail #home-upcoming-events #accordion-events {
         gap: 30px;
@@ -3807,36 +3787,6 @@ label.title {
 /*================================= Facilities Start =======================================*/
 
 .main_wrap_facilities{
-    .page_title{
-        margin-bottom: 40px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
     
     .img_text_card{
         margin: 0 auto;
@@ -3963,72 +3913,11 @@ label.title {
     
 }
 
-@media (max-width: 1199.98px) {
-    .main_wrap_facilities .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-}
-@media (max-width: 460px) {
-    .main_wrap_facilities .page_title h1{
-        font-size: 36px;
-    }
-}
-
 /*=================================  Facilities End =======================================*/
 
 /*================================= Program  Degree Details Start =======================================*/
 
 .main_wrap_pro_degree_detail{
-    .page_title{
-        margin-bottom: 0px;
-        h1{
-            left: 50%;
-            z-index: 2;
-            width: 100%;
-            bottom: 30px;
-            color: $white;
-            padding: 0 15px;
-            position: absolute;
-            transform: translateX(-50%);
-        }
-        .overlay-grade{
-            left: 0;
-            right: 0;
-            top: 50%;
-            bottom: 0;
-            z-index: 1;
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            background: linear-gradient(0deg, rgb(8, 8, 8) 0%, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 12px 100px 0;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
-    
 
     .pro_dir_Wraper .searchFilterBlock {
         //padding: 36px 20px 50px;
@@ -4350,27 +4239,13 @@ label.title {
 
 }
 
-@media (min-width: 1440.98px) {
-    .main_wrap_pro_degree_detail .page_title img{
-        width: 100%;
-        height: 689px;
-        object-fit: cover;
-    }
-}
 @media (max-width: 1199.98px) {
-    .main_wrap_pro_degree_detail .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     .main_wrap_pro_degree_detail .pro_dir_filter{
         padding-left: 0;
         padding-right: 15px;
     }
 }
 @media (max-width: 991.98px) {
-    .main_wrap_pro_degree_detail .page_title h1{
-        bottom: 0;
-    }
 
     .main_wrap_pro_degree_detail .pro_dir_filter .row .col-re .card-deck .card{
         flex: 0 0 calc(50% - 10px);
@@ -4378,9 +4253,6 @@ label.title {
 }
 
 @media (max-width: 767.98px) {
-    .main_wrap_pro_degree_detail .page_title h1{
-        font-size: 32px;
-    }
     .main_wrap_pro_degree_detail .pro_dir_filter{
         padding-right: 0;
     }
@@ -4419,17 +4291,7 @@ label.title {
     .main_wrap_pro_degree_detail .gen_video_img{
         padding: 52px;
     }
-}
 
-@media (max-width: 460px) {
-    .main_wrap_pro_degree_detail .page_title .overlay-grade{
-        top: 30%;
-        height: 70%;
-    }
-    .main_wrap_pro_degree_detail .page_title img{
-        height: 215px;
-        object-fit: cover;
-    }
 }
 
 /*================================= Program Degree Details End =======================================*/
@@ -4437,55 +4299,6 @@ label.title {
 /*================================= Admin Office Details Start =======================================*/
 
 .main_wrap_admin_ofc_detail{
-    .page_title{
-        margin-bottom: 0px;
-        h1{
-            left: 50%;
-            z-index: 2;
-            width: 100%;
-            bottom: 30px;
-            color: $white;
-            padding: 0 15px;
-            position: absolute;
-            transform: translateX(-50%);
-        }
-        .overlay-grade{
-            left: 0;
-            right: 0;
-            top: 50%;
-            bottom: 0;
-            z-index: 1;
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            background: linear-gradient(0deg, rgb(8, 8, 8) 0%, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            margin-bottom: 35px;
-            padding: 12px 100px 0;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
-    
 
     .pro_dir_Wraper .searchFilterBlock {
         //padding: 36px 20px 50px;
@@ -4988,27 +4801,13 @@ label.title {
 
 }
 
-@media (min-width: 1440.98px) {
-    .main_wrap_admin_ofc_detail .page_title img{
-        width: 100%;
-        height: 689px;
-        object-fit: cover;
-    }
-}
 @media (max-width: 1199.98px) {
-    .main_wrap_admin_ofc_detail .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     .main_wrap_admin_ofc_detail .pro_dir_filter{
         padding-left: 0;
         padding-right: 15px;
     }
 }
 @media (max-width: 991.98px) {
-    .main_wrap_admin_ofc_detail .page_title h1{
-        bottom: 0;
-    }
 
     .main_wrap_admin_ofc_detail .pro_dir_filter .row .col-re .card-deck .card{
         flex: 0 0 calc(50% - 10px);
@@ -5023,9 +4822,7 @@ label.title {
 }
 
 @media (max-width: 767.98px) {
-    .main_wrap_admin_ofc_detail .page_title h1{
-        font-size: 32px;
-    }
+    
     .main_wrap_admin_ofc_detail .pro_dir_filter{
         padding-right: 0;
     }
@@ -5061,15 +4858,7 @@ label.title {
 }
 
 @media (max-width: 460px) {
-    .main_wrap_admin_ofc_detail .page_title .overlay-grade{
-        top: 30%;
-        height: 70%;
-    }
-    .main_wrap_admin_ofc_detail .page_title img{
-        height: 215px;
-        object-fit: cover;
-    }
-    
+
     .main_wrap_admin_ofc_detail .pro_dir_filter .row .col-re .expanding-grid .links > li{
         width: 100%;
     }
@@ -5080,13 +4869,6 @@ label.title {
 /*================================= Calendar Start =======================================*/
 
 .main_wrap_calendar{
-    .page_title{
-        margin-bottom: 0px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
     .view-tab{
         top: 60px;
         right: 15px;
@@ -5151,31 +4933,6 @@ label.title {
             }
         }
     }
-
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
-
     
     .search_box {
         max-width: 300px;
@@ -5615,10 +5372,6 @@ label.title {
 }
 
 @media (max-width: 1199.98px) {
-    .main_wrap_calendar .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     .main_wrap_calendar .pro_dir_filter,
     .main_wrap_calendar .pro_dir_filter.calender-view-active{
         padding-left: 0;
@@ -5733,36 +5486,6 @@ label.title {
 /*================================= Search result Start =======================================*/
 
 .main_wrap_search_result{
-    .page_title{
-        margin-bottom: 40px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
 
     .main_search_content {
         display: flex;
@@ -6031,10 +5754,6 @@ label.title {
 }
 
 @media (max-width: 1199.98px) {
-    .main_wrap_search_result .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     .main_wrap_search_result .resull_filter{
         padding-left: 0;
         padding-right: 15px;
@@ -6067,37 +5786,6 @@ label.title {
 /*================================= Program Directory Start =======================================*/
 
 .main_wrap_program_dir{
-    .page_title{
-        margin-bottom: 40px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
-
     
     .search_box {
         margin-bottom: 25px;
@@ -6365,10 +6053,6 @@ label.title {
 }
 
 @media (max-width: 1199.98px) {
-    .main_wrap_program_dir .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     .main_wrap_program_dir .pro_dir_filter{
         padding-left: 0;
         padding-right: 15px;
@@ -6459,36 +6143,6 @@ label.title {
 /*================================= Room Rentails Start =======================================*/
 
 .main_wrap_room_rental{
-    .page_title{
-        margin-bottom: 40px;
-        background-color: $anti-flash-white;
-        h1{
-            display: inline-block;
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 0.75rem 8rem;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
     
     .img_text_card{
         margin: 0 auto;
@@ -6618,73 +6272,11 @@ label.title {
     
 }
 
-@media (max-width: 1199.98px) {
-    .main_wrap_room_rental .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-}
-
-@media (max-width: 460px) {
-    .main_wrap_room_rental .page_title h1{
-        font-size: 36px;
-    }
-}
-
 /*=================================  Room Rentails End =======================================*/
 
 /*================================= Program Directory Details Start =======================================*/
 
 .main_wrap_program_dir_detail{
-    .page_title{
-        margin-bottom: 0px;
-        h1{
-            left: 50%;
-            z-index: 2;
-            width: 100%;
-            bottom: 30px;
-            color: $white;
-            padding: 0 15px;
-            position: absolute;
-            transform: translateX(-50%);
-        }
-        .overlay-grade{
-            left: 0;
-            right: 0;
-            top: 50%;
-            bottom: 0;
-            z-index: 1;
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            background: linear-gradient(0deg, rgb(8, 8, 8) 0%, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%);
-        }
-    }
-    .main_breadcrumb{
-        .breadcrumb{
-            padding: 12px 100px 0;
-            background-color: transparent;
-            .breadcrumb-item+.breadcrumb-item{
-                padding-left: 0.25rem;
-                &::before{
-                    content: ">";
-                    @include bold;
-                    color: $primary;
-                    padding-right: 0.25rem;
-                }
-                &.active{
-                    @include regular;
-                    color: $primary;
-                }
-            }
-            a{
-                @include semi;
-                color: $primary;
-            }
-        }
-    }
-    
 
     .pro_dir_Wraper .searchFilterBlock {
         //padding: 36px 20px 50px;
@@ -6891,27 +6483,13 @@ label.title {
 
 }
 
-@media (min-width: 1440.98px) {
-    .main_wrap_program_dir_detail .page_title img{
-        width: 100%;
-        height: 689px;
-        object-fit: cover;
-    }
-}
 @media (max-width: 1199.98px) {
-    .main_wrap_program_dir_detail .main_breadcrumb .breadcrumb{
-        padding-left: 0;
-        padding-right: 0;
-    }
     .main_wrap_program_dir_detail .pro_dir_filter{
         padding-left: 0;
         padding-right: 15px;
     }
 }
 @media (max-width: 991.98px) {
-    .main_wrap_program_dir_detail .page_title h1{
-        bottom: 0;
-    }
 
     .main_wrap_program_dir_detail .pro_dir_filter .row .col-re .card-deck .card{
         flex: 0 0 calc(50% - 10px);
@@ -6919,9 +6497,7 @@ label.title {
 }
 
 @media (max-width: 767.98px) {
-    .main_wrap_program_dir_detail .page_title h1{
-        font-size: 32px;
-    }
+
     .main_wrap_program_dir_detail .pro_dir_filter{
         padding-right: 0;
     }
@@ -6949,17 +6525,6 @@ label.title {
     }
     .main_wrap_program_dir_detail .pro_dir_filter .row .col-re .card-deck .card{
         margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 460px) {
-    .main_wrap_program_dir_detail .page_title .overlay-grade{
-        top: 30%;
-        height: 70%;
-    }
-    .main_wrap_program_dir_detail .page_title img{
-        height: 215px;
-        object-fit: cover;
     }
 }
 
