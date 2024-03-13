@@ -250,6 +250,8 @@ select {
   min-height: 45px;
   min-width: 130px;
   background-size: 16px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   background-repeat: no-repeat;
   background-position: top 16px right 12px;
   background-image: url(../img/select-arrow.svg);
@@ -307,9 +309,12 @@ label.title {
 }
 
 /*================ Page Title/Breadcrumb Start ================*/
+.page_title_wrapper.has_title_bg {
+  margin-bottom: 40px;
+}
 .page_title_wrapper.has_title_bg .page_title {
   padding-top: 65px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   background-color: #F0F3FA;
 }
 .page_title_wrapper.has_title_bg .page_title h1 {
@@ -363,6 +368,7 @@ label.title {
 }
 .page_title_wrapper .main_breadcrumb .breadcrumb {
   padding: 0.75rem 0;
+  margin-bottom: 10px;
   background-color: transparent;
 }
 .page_title_wrapper .main_breadcrumb .breadcrumb .breadcrumb-item + .breadcrumb-item {
@@ -611,6 +617,7 @@ label.title {
 }
 .main_header .top_search .buttonsearch:focus {
   border: none;
+  outline: none;
 }
 .main_header .top_search .buttonsearch img {
   max-width: 25px;
@@ -2653,7 +2660,7 @@ label.title {
   margin-bottom: 0;
 }
 .main_wrap_academic_detail .pro_dir_Wraper .searchFilterBlock .acc__panel .tel_em_fax {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .main_wrap_academic_detail .pro_dir_Wraper .searchFilterBlock .acc__panel .tel_em_fax strong {
   color: #000000;
@@ -3109,7 +3116,7 @@ label.title {
 /*================================= Academic Office Directory Start =======================================*/
 .main_wrap_academic_dir .img_text_card {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1030px;
   padding-bottom: 120px;
 }
 .main_wrap_academic_dir .img_text_card_row .img_text_card_col {
@@ -3284,6 +3291,10 @@ label.title {
 .main_wrap_event_detail .event-details h4 {
   font-weight: 600;
   margin-top: 40px;
+  color: #0033A0;
+}
+.main_wrap_event_detail .event-details h4 span {
+  color: #000000;
 }
 .main_wrap_event_detail .event-details h5 a {
   text-decoration: underline;
@@ -3307,6 +3318,7 @@ label.title {
 }
 .main_wrap_event_detail .event-details .doc_block {
   font-weight: 600;
+  margin-left: 0;
   display: block;
   color: #0033A0;
   text-decoration: underline;
@@ -3537,7 +3549,7 @@ label.title {
 /*================================= Facilities Start =======================================*/
 .main_wrap_facilities .img_text_card {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1030px;
   padding-bottom: 90px;
 }
 .main_wrap_facilities .img_text_card_row .img_text_card_col {
@@ -3644,7 +3656,7 @@ label.title {
 }
 
 /*=================================  Facilities End =======================================*/
-/*================================= Program  Degree Details Start =======================================*/
+/*================================= Program Degree Details Start =======================================*/
 .main_wrap_pro_degree_detail {
   /*================ Image Or Video End ================*/
 }
@@ -3699,7 +3711,7 @@ label.title {
   display: none;
   border-top: 0;
   background: #F0F3FA;
-  padding: 0px 20px 30px 35px;
+  padding: 0px 20px 5px 35px;
 }
 .main_wrap_pro_degree_detail .pro_dir_Wraper .searchFilterBlock .acc__panel h6 {
   margin-bottom: 0;
@@ -3913,6 +3925,7 @@ label.title {
 }
 .main_wrap_pro_degree_detail .pro_dir_filter .row .col-re .doc_block {
   font-weight: 600;
+  margin-left: 0;
   display: block;
   color: #0033A0;
   margin-bottom: 10px;
@@ -4513,7 +4526,7 @@ label.title {
 /*================================= Admin Office Details End =======================================*/
 /*================================= Calendar Start =======================================*/
 .main_wrap_calendar .view-tab {
-  top: 60px;
+  top: 35px;
   right: 15px;
   position: absolute;
 }
@@ -4687,13 +4700,13 @@ label.title {
   margin-bottom: 10px;
 }
 .main_wrap_calendar .pro_dir_filter {
-  padding: 15px 100px 150px;
+  padding: 0px 100px 150px;
 }
 .main_wrap_calendar .pro_dir_filter .row {
   justify-content: space-between;
 }
 .main_wrap_calendar .pro_dir_filter .row .col-le {
-  margin-top: 60px;
+  margin-top: 0;
   min-width: 300px;
 }
 .main_wrap_calendar .pro_dir_filter .row .col-le .filterBlock {
@@ -4786,11 +4799,11 @@ label.title {
 }
 .main_wrap_calendar .pro_dir_filter .row .col-re h2 {
   color: #000000;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 .main_wrap_calendar .pro_dir_filter .row .col-re .document_era {
-  min-width: 150px;
+  min-width: 170px;
   align-self: flex-end;
 }
 .main_wrap_calendar .pro_dir_filter .row .col-re .document_era .col-md-12 {
@@ -4946,7 +4959,7 @@ label.title {
   display: none;
 }
 .main_wrap_calendar .pro_dir_filter.calender-view-active {
-  padding: 15px 40px 100px 50px;
+  padding: 0px 40px 100px 50px;
 }
 .main_wrap_calendar .pro_dir_filter.calender-view-active .row {
   position: relative;
@@ -4993,7 +5006,7 @@ label.title {
 }
 @media (max-width: 1320px) {
   .main_wrap_calendar .pro_dir_filter.calender-view-active .view-tab {
-    top: 60px;
+    top: 10px;
     bottom: auto;
   }
 }
@@ -5713,7 +5726,7 @@ label.title {
 /*================================= Room Rentails Start =======================================*/
 .main_wrap_room_rental .img_text_card {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1030px;
   padding-bottom: 90px;
 }
 .main_wrap_room_rental .img_text_card .room_rent_content {
@@ -5880,8 +5893,11 @@ label.title {
 .main_wrap_program_dir_detail .pro_dir_Wraper .searchFilterBlock .acc__panel h6 {
   margin-bottom: 0;
 }
+.main_wrap_program_dir_detail .pro_dir_Wraper .searchFilterBlock .acc__panel p {
+  margin-bottom: 5px;
+}
 .main_wrap_program_dir_detail .pro_dir_Wraper .searchFilterBlock .acc__panel .tel_em_fax {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .main_wrap_program_dir_detail .pro_dir_Wraper .searchFilterBlock .acc__panel .tel_em_fax strong {
   color: #000000;

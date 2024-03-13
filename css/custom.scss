@@ -252,8 +252,8 @@ select {
     min-height: 45px;
     min-width: 130px;
     background-size: 16px;
-    //-moz-appearance: none;
-    //-webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background-repeat: no-repeat;
     background-position: top 16px right 12px;
     background-image: url(../img/select-arrow.svg);
@@ -317,9 +317,10 @@ label.title {
 .page_title_wrapper{
     
     &.has_title_bg{
+        margin-bottom: 40px;
         .page_title{
             padding-top: 65px;
-            margin-bottom: 40px;
+            margin-bottom: 0px;
             background-color: $anti-flash-white;
             h1{
                 display: inline-block;
@@ -380,6 +381,7 @@ label.title {
         padding: 0 100px;
         .breadcrumb{
             padding: 0.75rem 0;
+            margin-bottom: 10px;
             background-color: transparent;
             .breadcrumb-item+.breadcrumb-item{
                 padding-left: 0.25rem;
@@ -629,6 +631,7 @@ label.title {
             }
             &:focus{
                 border: none;
+                outline: none;
             }
             img {
                 max-width: 25px;
@@ -2814,7 +2817,7 @@ label.title {
                 margin-bottom: 0;
             }
             .tel_em_fax {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 strong {
                     color: $black;
                     font-weight: 700;
@@ -3315,7 +3318,7 @@ label.title {
     
     .img_text_card{
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 1030px;
         padding-bottom: 120px;
     }
     .img_text_card_row {
@@ -3511,6 +3514,10 @@ label.title {
         h4{
             @include semi;
             margin-top: 40px;
+            color: $secondary;
+            span{
+                color: $black;
+            }
         }
         h5{
             a{
@@ -3536,6 +3543,7 @@ label.title {
         }
         .doc_block {
             @include semi;
+            margin-left: 0;
             display: block;
             color: $secondary;
             @include underline;
@@ -3790,7 +3798,7 @@ label.title {
     
     .img_text_card{
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 1030px;
         padding-bottom: 90px;
     }
     .img_text_card_row {
@@ -3915,7 +3923,7 @@ label.title {
 
 /*=================================  Facilities End =======================================*/
 
-/*================================= Program  Degree Details Start =======================================*/
+/*================================= Program Degree Details Start =======================================*/
 
 .main_wrap_pro_degree_detail{
 
@@ -3976,7 +3984,7 @@ label.title {
             display: none;
             border-top: 0;
             background: $anti-flash-white;
-            padding: 0px 20px 30px 35px;
+            padding: 0px 20px 5px 35px;
             h6 {
                 margin-bottom: 0;
             }
@@ -4199,6 +4207,7 @@ label.title {
                 }
                 .doc_block {
                     @include semi;
+                    margin-left: 0;
                     display: block;
                     color: $secondary;
                     margin-bottom: 10px;
@@ -4870,7 +4879,7 @@ label.title {
 
 .main_wrap_calendar{
     .view-tab{
-        top: 60px;
+        top: 35px;
         right: 15px;
         position: absolute;
         .btn{
@@ -5048,11 +5057,11 @@ label.title {
     }
 
     .pro_dir_filter {
-        padding: 15px 100px 150px;
+        padding: 0px 100px 150px;
         .row{
             justify-content: space-between;
             .col-le{
-                margin-top: 60px;
+                margin-top: 0;
                 min-width: 300px;
                 .filterBlock{
                     margin-bottom: 25px;
@@ -5154,11 +5163,11 @@ label.title {
                 max-width: calc(100% - 330px);
                 h2{
                     color: $black;
-                    margin-top: 60px;
-                    margin-bottom: 40px;
+                    margin-top: 35px;
+                    margin-bottom: 35px;
                 }
                 .document_era {
-                    min-width: 150px;
+                    min-width: 170px;
                     align-self: flex-end;
                     .col-md-12 {
                         padding-left: 0px;
@@ -5320,7 +5329,7 @@ label.title {
             display: none;
         }
         &.calender-view-active{
-            padding: 15px 40px 100px 50px;
+            padding: 0px 40px 100px 50px;
             .row{ position: relative; }
             .view-tab{
                 top: auto;
@@ -5366,7 +5375,7 @@ label.title {
 }
 @media (max-width: 1320px) {
     .main_wrap_calendar .pro_dir_filter.calender-view-active .view-tab{
-        top: 60px;
+        top: 10px;
         bottom: auto;
     }
 }
@@ -6146,7 +6155,7 @@ label.title {
     
     .img_text_card{
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 1030px;
         padding-bottom: 90px;
         .room_rent_content{
             padding-bottom: 50px;
@@ -6339,8 +6348,11 @@ label.title {
             h6 {
                 margin-bottom: 0;
             }
+            p{
+                margin-bottom: 5px;
+            }
             .tel_em_fax {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 strong {
                     color: $black;
                     font-weight: 700;
