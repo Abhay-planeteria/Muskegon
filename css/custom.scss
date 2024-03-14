@@ -3792,6 +3792,16 @@ label.title {
 
 /*================================= Event Details End =======================================*/
 
+/*================================= Event Details Info Start =======================================*/
+
+.main_wrap_event_detail_info{
+    .evt-right{
+        margin: 0 auto;
+    }
+}
+
+/*================================= Event Details Info End =======================================*/
+
 /*================================= Facilities Start =======================================*/
 
 .main_wrap_facilities{
@@ -3803,7 +3813,7 @@ label.title {
     }
     .img_text_card_row {
         .img_text_card_col {
-            padding: 0px 6px;
+            padding: 0px 6px; 
             margin-bottom: 15px;
             >a:hover {
                 .link {
@@ -4018,7 +4028,14 @@ label.title {
         .row{
             justify-content: space-between;
             .col-le{
+                gap: 15px;
+                display: flex;
                 min-width: 340px;
+                align-items: center;
+                flex-direction: column;
+                .searchFilterBlock{
+                    width: 100%;
+                }
                 .filterBlock{
                     margin-bottom: 45px;
                 }
@@ -4086,7 +4103,7 @@ label.title {
                 max-width: calc(100% - 370px);
                 h2{
                     color: $black;
-                    margin-bottom: 10px;
+                    margin-bottom: 35px;
                     padding-bottom: 10px;
                     border-bottom: 1px solid #798C8C;
                 }
@@ -4096,6 +4113,17 @@ label.title {
                 h3{
                     margin-top: 30px;
                     margin-bottom: 30px;
+                }
+                .document_era.Icon_link{
+                    column-gap: 40px;
+                    flex-wrap: wrap;
+                    .doc_block {
+                        img {
+                            min-width: 22px;
+                            margin-right: 10px;
+                            max-width: max-content;
+                        }
+                    }
                 }
 
                 .acc__main{
@@ -4266,7 +4294,7 @@ label.title {
         padding-right: 0;
     }
     .main_wrap_pro_degree_detail .pro_dir_Wraper .searchFilterBlock{
-        margin-bottom: 25px;
+        margin-bottom: 0px;
         padding-bottom: 20px;
     }
 
@@ -4279,6 +4307,9 @@ label.title {
         min-width: auto;
     }
     
+    .main_wrap_pro_degree_detail .pro_dir_filter .row .col-le{
+        padding-bottom: 40px;
+    }
     .main_wrap_pro_degree_detail .pro_dir_filter .row .col-re .acc__title .acco_sign{
         margin-right: 25px;
     }
