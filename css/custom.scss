@@ -6572,3 +6572,306 @@ label.title {
 }
 
 /*================================= Program Directory Details End =======================================*/
+
+/*================================= Auxilliary Services Start =======================================*/
+
+.main_wrap_aux_service{
+
+    .pro_dir_Wraper .searchFilterBlock {
+        //padding: 36px 20px 50px;
+        //background-color: $anti-flash-white;
+        .acc__card{
+            margin-bottom: 10px;
+        }
+        .acc__title {
+            display: flex;
+            min-height: auto;
+            border-radius: 0px;
+            position: relative;
+            align-items: center;
+            padding: 30px 20px 30px 40px;
+            background: $anti-flash-white;
+            h3 {
+                margin: 0px;
+                color: $black;
+                position: relative;
+            }
+        }
+        .acc__panel {
+            border-top: 0;
+            background: $anti-flash-white;
+            padding: 0px 20px 10px 40px;
+            &.ani_panel{
+                display: none;
+            }
+            h6 {
+                margin-bottom: 0;
+            }
+            .tel_em_fax {
+                margin-bottom: 10px;
+                strong {
+                    color: $black;
+                    font-weight: 700;
+                }
+                a {
+                    color: $primary;
+                    font-weight: 600;
+                    color: $secondary;
+                    text-decoration: underline;
+                    &:hover {
+                        color: #2977AE;
+                        text-decoration: underline;
+                    }
+                }
+                p {
+                    margin-bottom: 3px;
+                }
+                p.adress {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+
+    .pro_dir_filter {
+        padding: 0px 100px 70px;
+        .row{
+            justify-content: space-between;
+            .col-le{
+                min-width: 340px;
+                .filterBlock{
+                    margin-bottom: 45px;
+                }
+            }
+            .col-re{
+                max-width: calc(100% - 370px);
+                h2{
+                    margin-bottom: 10px;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #798C8C;
+                }
+                p{
+                    line-height: 24px;
+                }
+                h3{
+                    margin-top: 80px;
+                    margin-bottom: 35px;
+                }
+                .card-deck{
+                    gap: 10px;
+                    margin: 0;
+                    justify-content: left;
+                    .card{
+                        margin: 0;
+                        border: 0;
+                        border-radius: 0;
+                        flex: 0 0 calc(33.333% - 10px);
+                        box-shadow: 0px 3px 6px #00000038;
+                        .card-img-top{
+                            border-radius: 0;
+                        }
+                        .card-body{
+                            padding: 15px 15px 50px 20px;
+                            .card-title{
+                                margin-bottom: 0;
+                                line-height: 24px;
+                            }
+                        }
+                        .card-footer{
+                            border: 0;
+                            gap: 10px;
+                            background: 0;
+                            border-radius: 0;
+                            padding: 15px 20px 20px;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                .simple_list_info {
+                    margin-bottom: 80px;
+                    .row {
+                        justify-content: center;
+                    }
+                }
+                .simple_list_col {
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    margin-bottom: 8px;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px;
+                        @include bold;
+                        display: flex;
+                        color: $primary;
+                        font-size: 18px;
+                        min-height: 95px;
+                        background: none;
+                        text-align: center;
+                        position: relative;
+                        align-items: center;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        -ms-flex-pack: center;
+                        -ms-flex-align: center;
+                        justify-content: center;
+                        -webkit-box-pack: center;
+                        -webkit-box-align: center;
+                        border: 2px solid $primary;
+                        &:hover {
+                            color: $white;
+                            text-decoration: none;
+                            background: $secondary;
+                            border-color: $secondary;
+                        }
+                    }
+                }
+                /*================ Button List End ================*/
+                
+                .button_block {
+                    display: flex;
+                }
+                .img_buttons{
+                    margin: 50px 0 80px 0;
+                    flex-wrap: wrap;
+                }
+                .img_button_row {
+                    justify-content: center;
+                    .img_btn_col {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        margin-bottom: 15px;
+                        &:hover{
+                            img{
+                                filter: brightness(1.5);
+                            }
+                        }
+                    }
+                    .img_block {
+                        margin-bottom: 10px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .img_block_title {
+                        width: 100%;
+                        text-align: center;
+                        h3 {
+                            color: $black;
+                            margin: 0px;
+                            position: relative;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                /*================ Clickable Images End ================*/
+
+                //.addres_panel{}
+                .acc__card{
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    margin-bottom: 10px;
+                }
+                .acc__title {
+                    min-height: auto;
+                    border-radius: 0px;
+                    padding: 30px 20px 20px 40px;
+                    background: $anti-flash-white;
+                    h4 {
+                        margin: 0px;
+                        color: $black;
+                        position: relative;
+                    }
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+                .acc__panel {
+                    border-top: 0;
+                    background: $anti-flash-white;
+                    padding: 0px 20px 30px 40px;
+                    &.ani_panel{
+                        display: none;
+                    }
+                    h6 {
+                        margin-bottom: 0;
+                    }
+                    .tel_em_fax {
+                        margin-bottom: 5px;
+                        strong {
+                            color: $black;
+                            font-weight: 700;
+                        }
+                        a {
+                            color: $black;
+                            font-weight: 600;
+                            text-decoration: none;
+                            &:hover {
+                                color: $secondary;
+                                text-decoration: underline;
+                            }
+                        }
+                        p {
+                            margin-bottom: 3px;
+                        }
+                        p.adress {
+                            padding-top: 15px;
+                        }
+                    }
+                }
+                /*================ Address Box End ================*/
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1199.98px) {
+    
+    .main_wrap_aux_service .pro_dir_filter{
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    
+}
+@media (max-width: 991.98px) {
+    
+}
+
+@media (max-width: 767.98px) {
+    .main_wrap_aux_service .pro_dir_filter{
+        padding-right: 0;
+    }
+    .main_wrap_aux_service .pro_dir_Wraper .searchFilterBlock{
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .main_wrap_aux_service .pro_dir_filter .row{
+        flex-direction: column;
+    }
+    .main_wrap_aux_service .pro_dir_filter .row .col-le,
+    .main_wrap_aux_service .pro_dir_filter .row .col-re{
+        max-width: 100%;
+        min-width: auto;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    
+    .main_wrap_aux_service .pro_dir_filter .row .col-re{
+        margin: 0 auto;
+        max-width: fit-content;
+    }
+    
+    .main_wrap_aux_service .pro_dir_filter .row .col-re .addres_panel{
+        flex-direction: column;
+    }
+    
+}
+
+/*================================= Auxilliary Services End =======================================*/
