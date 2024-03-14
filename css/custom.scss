@@ -3931,7 +3931,166 @@ label.title {
     
 }
 
-/*=================================  Facilities End =======================================*/
+/*================================= Facilities End =======================================*/
+
+/*================================= Facilities Detais Start =======================================*/
+
+.main_wrap_facility_detail{
+
+    .pro_dir_Wraper .searchFilterBlock {
+        //padding: 36px 20px 50px;
+        //background-color: $anti-flash-white;
+        width: 100%;
+        .acc__card{
+            margin-bottom: 10px;
+        }
+        .acc__title {
+            min-height: auto;
+            border-radius: 0px;
+            position: relative;
+            padding: 25px 20px 25px 70px;
+            background: $anti-flash-white;
+            h3 {
+                margin: 0px 0 10px 0;
+                color: $black;
+                position: relative;
+            }
+        }
+        .acc__panel {
+            border-top: 0;
+            background: $anti-flash-white;
+            padding: 0px 20px 10px 70px;
+            &.ani_panel{
+                display: none;
+            }
+            h6 {
+                margin-bottom: 10px;
+            }
+            .tel_em_fax {
+                margin-bottom: 15px;
+                strong {
+                    color: $black;
+                    font-weight: 700;
+                }
+                a {
+                    color: $primary;
+                    font-weight: 600;
+                    color: $secondary;
+                    text-decoration: underline;
+                    &:hover {
+                        color: #2977AE;
+                        text-decoration: underline;
+                    }
+                }
+                p {
+                    margin-bottom: 3px;
+                }
+                p.adress {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+
+    .pro_dir_filter {
+        padding: 0px 75px 70px;
+        .row{
+            justify-content: space-between;
+            .col-le{
+                gap: 15px;
+                display: flex;
+                min-width: 465px;
+                align-items: center;
+                flex-direction: column;
+                .filterBlock{
+                    margin-bottom: 45px;
+                }
+                .btn_normal{
+                    font-size: 18px;
+                    margin-top: 30px;
+                    padding: 14px 26px;
+                }
+            }
+            .col-re{
+                max-width: calc(100% - 495px);
+                img{
+                    margin-bottom: 22px;
+                }
+                h2{
+                    margin-bottom: 10px;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #798C8C;
+                }
+                p{
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                }
+                h3{
+                    margin-top: 30px;
+                    margin-bottom: 15px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1199.98px) {
+    
+    .main_wrap_facility_detail .pro_dir_filter{
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    
+}
+@media (max-width: 1024.98px) {
+    .main_wrap_facility_detail .pro_dir_filter .row .col-le{
+        min-width: auto;
+        max-width: 365px;
+    }
+    .main_wrap_facility_detail .pro_dir_filter .row .col-re{
+        max-width: calc(100% - 395px);
+    }
+    .main_wrap_facility_detail .pro_dir_Wraper .searchFilterBlock .acc__title,
+    .main_wrap_facility_detail .pro_dir_Wraper .searchFilterBlock .acc__panel{
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .main_wrap_facility_detail .pro_dir_filter{
+        padding-right: 0;
+    }
+
+    .main_wrap_facility_detail .pro_dir_filter .row{
+        flex-direction: column;
+    }
+    .main_wrap_facility_detail .pro_dir_filter .row .col-le{
+        margin-bottom: 30px;
+    }
+    .main_wrap_facility_detail .pro_dir_filter .row .col-le,
+    .main_wrap_facility_detail .pro_dir_filter .row .col-re{
+        max-width: 100%;
+        min-width: auto;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    
+    .main_wrap_facility_detail .pro_dir_filter .row .col-re{
+        margin: 0 auto;
+        max-width: fit-content;
+    }
+    
+    .main_wrap_facility_detail .pro_dir_filter .row .col-re .addres_panel{
+        flex-direction: column;
+    }
+    
+}
+
+/*================================= Facilities Detais End =======================================*/
 
 /*================================= Program Degree Details Start =======================================*/
 
