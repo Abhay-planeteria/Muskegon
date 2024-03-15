@@ -7,8 +7,8 @@ $('.owl-general .owl-carousel').owlCarousel({
 	autoplay:true,
     margin: 10,
     nav: true,
-	 autoWidth:true,
-	 items: 2,
+    autoWidth:true,
+    items: 2,
     navText: [
         '<img src="img/slider-arrow-nav.svg">',
         '<img src="img/slider-arrow-nav.svg">'
@@ -83,5 +83,33 @@ $('.slider_area  .owl-carousel').owlCarousel({
     }
 });
 	
+
+$('.owl-general-rent .owl-carousel').owlCarousel({
+
+    loop: true,
+	dots:true,
+	autoplay:true,
+    margin: 10,
+    nav: true,
+    autoWidth:true,
+    items: 2,
+    navText: [
+        '<img src="img/slider-arrow-nav.svg">',
+        '<img src="img/slider-arrow-nav.svg">'
+    ],
+    navContainer: '.owl-general-rent .custom-nav',
+    /*responsive:{
+        0:{
+            items: 1
+        },
+        600:{
+            items: 1
+        },
+        1000:{
+            items: 1,
+			    stagePadding: 200
+        }
+    }*/
+});
 
 });
