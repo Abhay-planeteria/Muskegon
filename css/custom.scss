@@ -7359,10 +7359,17 @@ label.title {
 /*================================= Auxilliary Services End =======================================*/
 
 /*================================= News Start =======================================*/
+
+.news_wraper{
+    .container{max-width:1000px}
+}
 .main_wrap_news{
     //News page
     .top-title {
         margin-bottom: 20px;
+    }
+    h2{
+        color: black;
     }
     
     .newsArea {
@@ -7385,8 +7392,8 @@ label.title {
             flex-direction: column;
         }
         .newscolLg {
+            margin-bottom: 15px;
             width: 100% !important;
-            margin-bottom: 50px;
         }
     }
     
@@ -7409,7 +7416,7 @@ label.title {
             margin-bottom: 10px;
         }
         .horizontalCard {
-            align-items: center;
+            //align-items: center;
             .newsBody {
                 padding: 25px 35px;
             }
@@ -7421,12 +7428,36 @@ label.title {
     
     .newsBody {
         padding: 15px 25px;
+        p{
+            margin-bottom: 0;
+            line-height: 24px;
+        }
+    }
+    .newsinfo{
+        border-top: 6px solid #FFD100;
     }
     
     .signup_alerts_news {
+        margin-top: 40px;
         text-align: center;
         padding: 60px 20px;
         box-shadow: 0px 0px 3px #00000029;
+        .form-control{
+            min-width: 275px;
+            min-height: 40px;
+        }
+        .btn_normal{
+            padding: 7px 70px;
+            margin-bottom: 10px;
+            border: 1px solid #000000;
+            &:hover{
+                background-color: $black;
+            }
+        }
+        .signup_alerts_news-wrap{
+            gap: 25px;
+            justify-content: center;
+        }
     }
     
     .newsSearchEra {
@@ -7439,7 +7470,7 @@ label.title {
         display: grid;
         grid-template-columns: 1fr 180px 130px;
         align-items: end;
-        max-width: 75%;
+        //max-width: 75%;
         grid-column-gap: 5px;
     }
     
@@ -7456,7 +7487,121 @@ label.title {
     }
     
     .newsInRow {
+        margin-top: 40px;
         margin-bottom: 40px;
+        .search_box {
+            margin-bottom: 25px;
+            .btn {
+                top: 0;
+                right: 0;
+                border: 0;
+                z-index: 90;
+                width: 50px;
+                height: 50px;
+                border-radius: 0px;
+                position: absolute;
+                background-color: $cyber-yellow;
+                img {
+                    max-width: 23px;
+                }
+            }
+            .form-control {
+                color: $black;
+                font-size: 16px;
+                min-width: 100%;
+                min-height: 50px;
+                border-radius: 0;
+                padding-right: 60px;
+                border: 1px solid #E2E2E2;
+                box-shadow: 0px 0px 3px #00000029;
+                &:focus{
+                    box-shadow: none;
+                    border: 1px solid #E2E2E2;
+                }
+            }
+            .probox,
+            input.orig,
+            .proclose,
+            .innericon,
+            .promagnifier {
+                height: 45px !important;
+                font-size: 16px !important;
+                font-family: "Industry", sans-serif !important;
+            }
+            .innericon {
+                background-size: 24px !important;
+            }
+            .probox {
+                height: auto;
+                border: 0 !important;
+                overflow: visible !important;
+            }
+            .asp_main_container {
+                border-radius: 5px;
+                overflow: visible !important;
+                border: 1px solid #D9D9D9;
+            }
+            .probox {
+                min-width: 100%;
+            }
+            .proinput input.orig {
+                font-size: 15px !important;
+                color: #000102!important;
+                border-bottom: 0!important;
+                padding-bottom: 4px !important;
+                font-weight: normal !important;
+                font-family: 'Gill Sans', sans-serif !important;
+            }
+            ::-webkit-input-placeholder {
+                font-size: 15px !important;
+                color: #000102 !important;
+                font-weight: normal !important;
+                font-family: 'Gill Sans', sans-serif !important;
+            }
+            ::-moz-placeholder {
+                font-size: 15px !important;
+                color: #000102!important;
+                font-weight: normal !important;
+                font-family: 'Gill Sans', sans-serif !important;
+            }
+            :-ms-input-placeholder {
+                font-size: 15px !important;
+                color: #000102 !important;
+                font-weight: normal !important;
+                font-family: 'Gill Sans', sans-serif !important;
+            }
+            :-moz-placeholder {
+                font-size: 15px !important;
+                color: #000102 !important;
+                font-weight: normal !important;
+                font-family: 'Gill Sans', sans-serif !important;
+            }
+            .promagnifier {
+                display: flex;
+                align-items: center;
+                width: 45px !important;
+                justify-content: center;
+                background: $primary !important;
+                border-radius: 0px 5px 5px 0px !important;
+            }
+            .innericon svg {
+                width: 28px !important;
+            }
+        }
+        select {
+            font-weight: 500;
+            margin-bottom: 12px;
+            border: 1px solid #E2E2E2;
+            box-shadow: 0px 0px 3px #00000029;
+            background: #FFFFFF url(../img/icon-arrow-down.svg) no-repeat center right 15px;
+            background-size: 24px 14px;
+        }
+        label{
+            font-weight: 700;
+            padding-left: 5px;
+            text-transform: none;
+            margin-bottom: 0.25rem;
+        }
     }
     
     .nsRight {
